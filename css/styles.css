@@ -2975,7 +2975,7 @@ margin-bottom: 15px;
 
 @media screen and (min-width: 1024px) {
     .bathroom-container-text  { 
-       padding-top: 256px;
+       padding-top: 65px;
     }
 }
 
@@ -3608,12 +3608,14 @@ width: 100%;
 @media screen and (min-width: 1024px) {
     .equipment-container  { 
        width: 444px;
+       padding-top: 0;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .equipment-container {
        width: 813px;
+       padding-top: 30px;
     }
   }
 
@@ -4041,7 +4043,7 @@ text-transform: uppercase;
 
 @media screen and (min-width: 1024px) {
     .equipment-container-text  { 
-       padding-top: 234px;
+       padding-top: 75px;
        padding-left: 16px;
        padding-right: 15px;
     }
