@@ -5059,11 +5059,13 @@ padding-bottom: 20px;
 display: flex;
 flex-direction: column;
 gap: 5px;
+padding-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
     .footer-list  {
       gap: 10px;  
+      padding-bottom: 0;
     }
 }
 
