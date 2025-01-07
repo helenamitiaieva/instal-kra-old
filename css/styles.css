@@ -5131,7 +5131,7 @@ transition: fill-opacity 0.3s ease;
 @media screen and (min-width: 768px) {
     .footer-map  {
         width: 138px;
-        height: 170px;
+        height: 190px;
         border-radius: 15px;
 
     }
@@ -5140,20 +5140,19 @@ transition: fill-opacity 0.3s ease;
 @media screen and (min-width: 1024px) {
     .footer-map  { 
         width: 171px;
-        height: 200px; 
+        height: 225px; 
     }
 }
 
 @media screen and (min-width: 1440px) {
     .footer-map {
         width: 190px;
-        height: 220px; 
+        height: 245px; 
     }
   }
   @media screen and (min-width: 1920px) {
     .footer-map {
         width: 192px;
-        height: 190px; 
     }
   }
 
