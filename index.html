@@ -108,8 +108,8 @@
                     </li>
                 </ul>
                 <div class="hero-container-button">
-                    <button class="hero-button hero-button-decor">
-                        <a href="#footer" class="hero-button-link">Skontaktuj się z nami</a>
+                    <button id="scrollToFooter" class="hero-button hero-button-decor">
+                        Skontaktuj się z nami
                     </button>
                 </div>
             </div>
@@ -176,20 +176,50 @@
                     </h3>
                     <ul class="partner-list-img">
                         <li class="partner-item-img">
-                            <img
-                            src="./image/loyalty_program.jpg"
-                            alt="integris+"
-                            class="partner-img"
-                            width="263"
-                            height="auto">
+                            <picture>
+                                <source
+                                media="(max-width: 767px)"
+                                srcset="./image/integris1-390-1x.jpg 1x, ./image/integris1-390-2x.jpg 2x"
+                                >
+                                <source 
+                                media="(min-width: 768px) and (max-width: 1023px)" 
+                                srcset="./image/integris1-768-1x.jpg 1x, ./image/integris1-768-2x.jpg 2x">
+                                <source 
+                                media="(min-width: 1024px) and (max-width: 1439px)" 
+                                srcset="./image/integris1-1024-1x.jpg 1x, ./image/integris1-1024-2x.jpg 2x"> 
+                                <source 
+                                media="(min-width: 1440px) and (max-width: 1919px)" 
+                                srcset="./image/integris1-1440-1x.jpg 1x, ./image/integris1-1440-2x.jpg 2x"> 
+                                <source 
+                                media="(min-width: 1920px)" 
+                                srcset="./image/integris1-1920-1x.jpg 1x, ./image/integris1-1920-2x.jpg 2x">  
+                                <img src="./image/integris1-1920-1x.jpg" alt="lojalty program" class="partner-img" width="263" height="auto">
+                              </picture>
                         </li>
                         <li class="partner-item-img">
-                            <img
-                            src="./image/loyalty_program_2023.jpg"
-                            alt="thermaflex"
-                            class="partner-img"
-                            width="134"
-                            height="auto">
+                            <picture>
+                                <source
+                                media="(max-width: 767px)"
+                                srcset="./image/integris-2024-390-1x.jpg 1x, ./image/integris-2024-390-2x.jpg 2x"
+                                >
+                                <source 
+                                media="(min-width: 768px) and (max-width: 1023px)" 
+                                srcset="./image/integris-2024-768-1x.jpg 1x, ./image/integris-2024-768-2x.jpg 2x">
+                                <source 
+                                media="(min-width: 1024px) and (max-width: 1439px)" 
+                                srcset="./image/integris-2024-1024-1x.jpg 1x, ./image/integris-2024-1024-2x.jpg 2x"> 
+                                <source 
+                                media="(min-width: 1440px) and (max-width: 1919px)" 
+                                srcset="./image/integris-2024-1440-1x.jpg 1x, ./image/integris-2024-1440-2x.jpg 2x"> 
+                                <source 
+                                media="(min-width: 1920px)" 
+                                srcset="./image/integris-2024-1920-1x.jpg 1x, ./image/integris-2024-1920-2x.jpg 2x">  
+                                <img
+                            src="./image/integris-2024-1920-1x.jpg"
+                            alt="integris+"
+                            class="partner-img partner-img-second">
+                              </picture>
+                            
                         </li>
                     </ul>
                 </div>
@@ -1212,6 +1242,7 @@
 
         </section>
     </main>
+    <!-- FOOTER -->
     <footer class="footer container" id="footer">
         <div class="footer-container-logo">
             <a href="#hero">

@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Контейнеры и кнопки для каждого блока
     const horizontScroll1 = document.querySelector('.heating-container-cards');
     const leftBtn1 = document.querySelector('#heating-button-left');
     const rightBtn1 = document.querySelector('#heating-button-right');
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const leftBtn4 = document.querySelector('#equipment-button-left');
     const rightBtn4 = document.querySelector('#equipment-button-right');
 
-    // Оригинальные элементы для каждого контейнера
     const originalItems1 = [...horizontScroll1.children];
     const originalItems2 = [...horizontScroll2.children];
     const originalItems3 = [...horizontScroll3.children];
@@ -51,32 +49,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (direction === 'right') {
             horizontScroll.scrollLeft += scrollStep;
 
-            // Если конец контента близок, добавляем новые элементы
             if (horizontScroll.scrollLeft + horizontScroll.offsetWidth >= horizontScroll.scrollWidth - scrollStep) {
                 cloneItems(horizontScroll, originalItems);
             }
         } else if (direction === 'left') {
             horizontScroll.scrollLeft -= scrollStep;
 
-            // Если начало контента близко, добавляем элементы в начало
             if (horizontScroll.scrollLeft <= scrollStep) {
                 originalItems.forEach((item) => {
                     const clone = item.cloneNode(true);
                     horizontScroll.insertBefore(clone, horizontScroll.firstChild);
                 });
-                horizontScroll.scrollLeft += scrollStep * originalItems.length; // Корректируем позицию
+                horizontScroll.scrollLeft += scrollStep * originalItems.length; 
             }
         }
-
-        // // Удаляем элементы, которые больше не видны
-        // if (horizontScroll.children.length > originalItems.length * 3) {
-        //     removeFirstItems(horizontScroll, originalItems);
-        // }
-
-        // return gap + 15; // Увеличиваем шаг прокрутки
     };
 
-    // Привязываем обработчики событий к кнопкам для каждого контейнера
     rightBtn1.addEventListener('click', () => gap1 = handleScroll(horizontScroll1, originalItems1, 'right', gap1));
     leftBtn1.addEventListener('click', () => gap1 = handleScroll(horizontScroll1, originalItems1, 'left', gap1));
 
@@ -95,4 +83,13 @@ var button = $(".burger-menu-wrapper");
 button.click(function() {
 	button.toggleClass("closing", button.hasClass("open"));
 	button.toggleClass("open");
+});
+
+// HERO BUTTON
+
+const buttonHero = document.getElementById('scrollToFooter');
+const footer = document.getElementById('footer');
+
+buttonHero.addEventListener('click', () => {
+    footer.scrollIntoView({ behavior: 'smooth' });
 });
