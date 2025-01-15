@@ -85,11 +85,3 @@ button.click(function() {
 	button.toggleClass("open");
 });
 
-// HERO BUTTON
-
-const buttonHero = document.getElementById('scrollToFooter');
-const footer = document.getElementById('footer');
-
-buttonHero.addEventListener('click', () => {
-    footer.scrollIntoView({ behavior: 'smooth' });
-});
