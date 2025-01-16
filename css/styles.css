@@ -1261,6 +1261,10 @@ padding-right: 53px;
     }
 } 
 
+.about-img {
+    border-radius: 40px 40px 0px 0px;
+}
+
 .about-title {
 font-size: 20px;
 font-weight: 700;
@@ -1778,7 +1782,7 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
 @media screen and (min-width: 1024px) {
     .heating-container-card-img  { 
         gap: 15px;
-        padding-top: 50px;
+        padding-top: 30px;
         padding-left: 10px;
         padding-right: 10px;  
     }
@@ -1792,7 +1796,7 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
 
 @media screen and (min-width: 1920px) {
     .heating-container-card-img  {
-        padding-top: 55px;
+        padding-top: 30px;
         padding-left: 20px;
         padding-right: 20px;  
     }
@@ -2012,9 +2016,15 @@ padding-right: 1px;
 
     @media screen and (min-width: 1024px) {
         .recuperation  { 
-            padding-top: 86px;
+            padding-top: 65px;
             padding-left: 32px;
             padding-right: 32px;
+        }
+    }   
+
+    @media screen and (min-width: 1920px) {
+        .recuperation  { 
+            padding-top: 50px;
         }
     }   
 
@@ -2274,8 +2284,9 @@ text-transform: uppercase;
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1440px) {
     .plumbing-button-left {
+        left: -15px;  
     }
   }
 
@@ -2294,6 +2305,12 @@ text-transform: uppercase;
 @media screen and (min-width: 768px) {
     .plumbing-button-right { 
         right: 0; 
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .plumbing-button-right { 
+        right: -15px; 
     }
   }
 
@@ -3153,7 +3170,18 @@ justify-content: start;
         top: 50%;
         left: 0;
     }
+  }
 
+  @media screen and (min-width: 1024px) {
+    .bathroom-button-left {
+        left: -10px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .bathroom-button-left {
+        left: 0px;
+    }
   }
 
 
@@ -3664,14 +3692,12 @@ width: 100%;
 @media screen and (min-width: 1024px) {
     .equipment-container  { 
        width: 444px;
-       padding-top: 0;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .equipment-container {
        width: 813px;
-       padding-top: 30px;
     }
   }
 
@@ -3694,7 +3720,7 @@ width: 100%;
 
 @media screen and (min-width: 1024px) {
     .equipment-button-left   {
-        left: 0;
+        left: -10px;
        
     }
 }
