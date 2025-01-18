@@ -1753,11 +1753,23 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
     }
   }
 
+
 /* HEATING-IMAGE */
 
 .heating-link-logo {
+    
     cursor: pointer;
+
 }
+
+@media (min-width: 0px) and (max-width: 767px) {  
+    .heating-link-logo {
+        width: 30%;
+        height: auto;
+    } 
+}
+
+
 
 .heating-container-card-img {
     display: flex;
@@ -1765,9 +1777,10 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
     justify-content: center;
     align-items: center;
     gap: 8px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 14px;
     padding-right: 14px;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1999,7 +2012,7 @@ padding-right: 1px;
 }
 
 .recuperation {
-    padding-top: 40px;
+    padding-top: 20px;
     gap: 14px;
     padding-left: 10px;
     padding-right: 10px;
@@ -2065,9 +2078,15 @@ padding-right: 1px;
     align-items: baseline;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {  
+    .tool-systems { 
+padding-top: 30px;
+    } 
+    }
+
 .solar-systems {
     gap: 16px;
-    padding-top: 25px;
+    padding-top: 15px;
     padding-left: 20px;
     padding-right: 20px; 
     align-items: center;
@@ -2100,13 +2119,15 @@ padding-right: 1px;
     }
 }
 
+
 @media (min-width: 0px) and (max-width: 767px) {  
     .heating-logo {
-        width: 30%;
+        display: block;
+        width: 100%;
         height: auto;
     } 
     .heating-logo-big {
-        width: 40%;
+        width: 130%;
     }
     }
 
@@ -2435,8 +2456,13 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
 
 .plumbing-link-logo {
 cursor: pointer;
-padding: 0;
-margin: 0;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {  
+    .plumbing-link-logo {
+        width: 40%;
+        height: auto;
+    } 
 }
 
 .plumbing-container-card-img {
@@ -2630,7 +2656,7 @@ gap: 20px;
 }
 
 .steel-installations {
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -2706,7 +2732,7 @@ gap: 20px;
 }
 
 .fixing-systems {
-    padding-top: 50px;
+    padding-top: 35px;
 }
 
 @media screen and (min-width: 768px) {
@@ -2728,7 +2754,7 @@ gap: 20px;
 }
 
 .welded-systems {
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 58px;
 }
 
@@ -2746,12 +2772,12 @@ gap: 20px;
 
 @media (min-width: 0px) and (max-width: 767px) {  
     .plumbing-logo { 
-        width: 40%;
+        width: 100%;
         height: auto;
     } 
 
     .plumbing-logo-small {
-        width: 30%;
+        width: 85%;
     }
     }
 
@@ -3239,7 +3265,7 @@ white-space: nowrap;
 
 @media screen and (min-width: 1440px) {
     .bathroom-container-cards {
-       width: 780px;
+       width: 749px;
       
     }
   }
@@ -3321,7 +3347,7 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
     justify-content: center;
     align-items: center;
     gap: 5px;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-left: 14px;
     padding-right: 14px;
 }
@@ -3356,13 +3382,13 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
 /* IMAGE CARD BATHROOM */
 
 .bathroom-furniture {
-padding-top: 25px;
+padding-top: 15px;
 gap: 15px;
 }
 
 @media screen and (min-width: 768px) {
     .bathroom-furniture  {
-        padding-top: 50px;
+        padding-top: 35px;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -3378,9 +3404,9 @@ gap: 15px;
 .batteries {
     align-items: center;
     gap: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 30px;
+    padding-right: 0px;
+    padding-left: 15px;
+    padding-top: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -3457,10 +3483,11 @@ gap: 15px;
 }
 
 .bathtubs {
+    align-items: center;
     padding-left: 5px;
         padding-right: 5px;
-        padding-top: 15px;
-        gap: 15px;
+        padding-top: 20px;
+        gap: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -3474,6 +3501,9 @@ gap: 15px;
 @media screen and (min-width: 1024px) {
     .bathtubs {
         padding-top: 45px;
+        gap: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
   }
 
@@ -3504,14 +3534,25 @@ gap: 15px;
     }
 }
 
+.bathroom-link-logo {
+    cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {  
+    .bathroom-link-logo {
+        width: 40%;
+        height: auto;
+    } 
+}
+
 @media (min-width: 0px) and (max-width: 767px) {  
     .bathroom-logo { 
-        width: 40%;
+        width: 100%;
         height: auto;
     } 
 
     .bathroom-logo-small {
-        width: 30%;
+        width: 90%;
     }
     }
 
@@ -3869,7 +3910,7 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
 
 .equipment-container-card-img {
     gap: 8px;
-    padding-top: 30px;
+    padding-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
     display: flex;
@@ -3944,9 +3985,9 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
 }
 
 .hydrophores {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
     gap: 5px;
 }
 
@@ -4008,14 +4049,25 @@ padding-right: 10px;
     }
 }
 
+.equipment-link-logo {
+    cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {  
+    .equipment-link-logo {
+        width: 40%;
+        height: auto;
+    } 
+}
+
 @media (min-width: 0px) and (max-width: 767px) {  
     .equipment-logo { 
-        width: 40%;
+        width: 100%;
         height: auto;
     } 
 
     .equipment-logo-small {
-        width: 30%;
+        width: 90%;
     }
     }
 
@@ -4511,7 +4563,7 @@ width: 100%;
 position: absolute;
 content: '';
 top: -20px;
-right: -45px;
+right: -25px;
 width: 187px; 
 height: 255px; 
 background-image: url('/image/address.png'); /* Посилання на SVG */
