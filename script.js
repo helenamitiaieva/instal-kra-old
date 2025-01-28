@@ -78,10 +78,50 @@ document.addEventListener('DOMContentLoaded', () => {
     leftBtn4.addEventListener('click', () => gap4 = handleScroll(horizontScroll4, originalItems4, 'left', gap4));
 });
 
-var button = $(".burger-menu-wrapper");
+document.addEventListener('DOMContentLoaded', () => {
+    const priceButton = document.getElementById('priceButton');
+    const popup = document.getElementById('popup');
+    const producersLink = document.getElementById('producers');
+    const listsPopup = document.getElementById('listsPopup');
+    const burgerMenu = document.getElementById('burgerMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobilePriceButton = document.getElementById('mobilePriceButton');
 
-button.click(function() {
-	button.toggleClass("closing", button.hasClass("open"));
-	button.toggleClass("open");
+    // Toggle burger menu
+    burgerMenu.addEventListener('click', () => {
+        const isMenuVisible = mobileMenu.style.display === 'flex';
+        mobileMenu.style.display = isMenuVisible ? 'none' : 'flex';
+    });
+
+    // Toggle price popup from mobile menu
+    mobilePriceButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        const isPricePopupVisible = popup.style.display === 'block';
+        popup.style.display = isPricePopupVisible ? 'none' : 'block';
+        mobileMenu.style.display = 'none';
+    });
+
+
+
+    priceButton.addEventListener('click', () => {
+        const isVisible = popup.style.display === 'block';
+        popup.style.display = isVisible ? 'none' : 'block';
+        listsPopup.style.display = 'none'; // Hide lists when main popup toggles
+    });
+
+    producersLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        const isListsVisible = listsPopup.style.display === 'block';
+        listsPopup.style.display = isListsVisible ? 'none' : 'block';
+        popup.style.display = 'none'; 
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!popup.contains(event.target) && event.target !== priceButton &&
+            !listsPopup.contains(event.target) && event.target !== producersLink) {
+            popup.style.display = 'none';
+            listsPopup.style.display = 'none';
+        }
+    });
 });
 
