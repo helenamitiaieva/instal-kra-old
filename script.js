@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    const listsPriceButton = document.getElementById('listsPriceButton');
+    const listsPricePopup = document.getElementById('listsPricePopup');
     const priceButton = document.getElementById('priceButton');
     const popup = document.getElementById('popup');
     const producersLink = document.getElementById('producers');
@@ -89,39 +91,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle burger menu
     burgerMenu.addEventListener('click', () => {
-        const isMenuVisible = mobileMenu.style.display === 'flex';
-        mobileMenu.style.display = isMenuVisible ? 'none' : 'flex';
+        mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
     });
 
     // Toggle price popup from mobile menu
     mobilePriceButton.addEventListener('click', (event) => {
         event.preventDefault();
-        const isPricePopupVisible = popup.style.display === 'block';
-        popup.style.display = isPricePopupVisible ? 'none' : 'block';
+        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
         mobileMenu.style.display = 'none';
     });
 
-
-
-    priceButton.addEventListener('click', () => {
-        const isVisible = popup.style.display === 'block';
-        popup.style.display = isVisible ? 'none' : 'block';
-        listsPopup.style.display = 'none'; // Hide lists when main popup toggles
-    });
-
-    producersLink.addEventListener('click', (event) => {
+    // Toggle "Cenniki do pobrania"
+    listsPriceButton?.addEventListener('click', (event) => {
         event.preventDefault();
-        const isListsVisible = listsPopup.style.display === 'block';
-        listsPopup.style.display = isListsVisible ? 'none' : 'block';
-        popup.style.display = 'none'; 
+        if (listsPricePopup) {
+            listsPricePopup.style.display = listsPricePopup.style.display === 'block' ? 'none' : 'block';
+        }
+        popup.style.display = 'none';
+        if (listsPopup) listsPopup.style.display = 'none';
     });
 
+    // Toggle "CENNIKI"
+    priceButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Toggle "Producers"
+    producersLink?.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (listsPopup) {
+            listsPopup.style.display = listsPopup.style.display === 'block' ? 'none' : 'block';
+        }
+        popup.style.display = 'none';
+        if (listsPricePopup) listsPricePopup.style.display = 'none';
+    });
+
+    // Close all popups when clicking outside
     document.addEventListener('click', (event) => {
-        if (!popup.contains(event.target) && event.target !== priceButton &&
-            !listsPopup.contains(event.target) && event.target !== producersLink) {
-            popup.style.display = 'none';
-            listsPopup.style.display = 'none';
+        if (
+            !burgerMenu.contains(event.target) &&
+            !mobileMenu.contains(event.target) &&
+            (!popup || !popup.contains(event.target)) &&
+            (!listsPricePopup || !listsPricePopup.contains(event.target)) &&
+            (!listsPopup || !listsPopup.contains(event.target))
+        ) {
+            mobileMenu.style.display = 'none';
+            if (popup) popup.style.display = 'none';
+            if (listsPricePopup) listsPricePopup.style.display = 'none';
+            if (listsPopup) listsPopup.style.display = 'none';
         }
     });
 });
-
