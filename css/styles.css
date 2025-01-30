@@ -130,13 +130,12 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgba(0, 0, 0, 0.5); 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%; 
     z-index: 1000; 
-    backdrop-filter: blur(10px);
     box-shadow: 0px 6px 30px -9px rgba(0,0,0,0.1);
     justify-content: center;
     align-items: center;
@@ -492,8 +491,8 @@ letter-spacing: 0.05em;
     z-index: 10;
     padding: 10px;
     border-radius: 20px;
-background: rgba(31, 174, 138, 1.12);
-backdrop-filter: blur(px);
+    background: rgba(31, 174, 138, 0.12);
+    backdrop-filter: blur(15px);
 display: none;
 }
 
@@ -559,6 +558,7 @@ text-transform: uppercase;
 .menu-link-container-price {
    display: flex;
   justify-self: center;
+  align-items: center;
   margin-bottom: 5px;
 }
 
@@ -571,8 +571,8 @@ text-transform: uppercase;
     z-index: 10;
     padding: 10px;
     border-radius: 20px;
-background: rgba(31, 174, 138, 1.12);
-backdrop-filter: blur(px);
+    background: rgba(31, 174, 138, 0.12);
+    backdrop-filter: blur(15px);
 display: none;  
 max-height: 300px; 
   overflow-y: auto; 
@@ -608,8 +608,8 @@ max-height: 300px;
     z-index: 10;
     padding: 10px;
     border-radius: 20px;
-background: rgba(31, 174, 138, 1.12);
-backdrop-filter: blur(px);
+    background: rgba(31, 174, 138, 0.12);
+    backdrop-filter: blur(15px);
 display: none;  
 max-height: 300px; 
   overflow-y: auto; 
@@ -634,13 +634,17 @@ max-height: 300px;
     }
   }
 
+  .item-lists-price::marker {
+    color: #F7F9FC;
+  }
 
 .list-lists-price {
     display: grid; 
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px 20px;
+  gap: 15px 30px;
   list-style: disc;
   padding-left: 50px;
+  padding-right: 50px;
 }
 
 .menu-link-price {
@@ -653,6 +657,7 @@ max-height: 300px;
 }
 
 .menu-link-container-price {
+
     
 }
 
@@ -690,7 +695,8 @@ width: 140px;
 top: 100%;
 left: 60%;
 gap: 10px;
-background-color: #1EAF8A;
+background: rgba(31, 174, 138, 0.12);
+backdrop-filter: blur(15px);
 padding: 20px;
 display: none;
 }
