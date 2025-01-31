@@ -234,9 +234,9 @@ display: none;
 @media (min-width: 768px) and (max-width: 1023px) {
     .menu {
         flex-wrap: wrap;
-        width: 271px;
+        width: 300px;
         height: 44px;
-        gap: 0px; 
+        gap: 5px; 
     }
   }
 
@@ -496,6 +496,7 @@ letter-spacing: 0.05em;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
 display: none;
+
 }
 
 @media screen and (min-width: 768px) {
@@ -519,50 +520,126 @@ display: none;
     }
   }
 
-.menu-link-container-price, 
-.lists-price-link {
-    color: #F7F9FC;
-font-family: "Work Sans";
-font-size: 10px;
-font-style: normal;
-font-weight: 700;
-line-height: 1.5;
-letter-spacing: 1px;
-letter-spacing: 0.05em;
-text-transform: uppercase;
+  .menu-link-container-price, 
+  .lists-price-link {
+      color: #F7F9FC;
+      font-family: "Work Sans";
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.5s ease; /* Плавный переход для изменения цвета */
+  }
+  
+  /* Анимация для полоски */
+  .menu-link-container-price::after, 
+  .lists-price-link::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #F7F9FC; /* Белая полоска */
+      bottom: 0;
+      left: 0;
+      opacity: 0; /* Изначально полоска невидимая */
+      transform: scaleX(0); /* Изначально полоска уменьшена */
+      transform-origin: center; /* Центрирование трансформации */
+      transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для всех свойств */
+  }
+  
+  /* Плавное появление полоски и изменение цвета текста при наведении */
+  .menu-link-container-price:hover::after, 
+  .lists-price-link:hover::after {
+      opacity: 1; /* Полоска становится видимой */
+      transform: scaleX(1); /* Полоска увеличивается в ширину */
+      background-color: #1EAF8A; /* Полоска становится зелёной */
+  }
+  
+
+  
+  @media screen and (min-width: 768px) {   
+      .menu-link-container-price, 
+      .lists-price-link {
+          font-size: 13px;
+          line-height: 1.54;
+      }
+  }
+  
+  @media screen and (min-width: 1024px) {
+      .menu-link-container-price, 
+      .lists-price-link { 
+          font-size: 16px;
+          line-height: 1.25;
+      }
+  }
+  
+  @media screen and (min-width: 1440px) {
+      .menu-link-container-price, 
+      .lists-price-link {
+          font-size: 20px;
+          line-height: 1.5;
+      }
+  }
+  
+
+.menu-price-container-icon {
+display: flex;
+gap: 5px;
+padding-left: 30px;
+margin-top: 5px;
+margin-bottom: 5px;
 }
 
-@media screen and (min-width: 768px) {   
-.menu-link-container-price, 
-.lists-price-link   {
-    font-size: 13px;
-    line-height: 1.54;
+@media screen and (min-width: 768px) {
+    .menu-price-container-icon  {
+        margin-top: 15px;
+        margin-bottom: 15px; 
     }
 }
 
-@media screen and (min-width: 1024px) {
-    .menu-link-container-price, 
-    .lists-price-link   { 
-        font-size: 16px;
-        line-height: 1.25;
-    }
+.menu-price-icon {
+    width: 15px;
+    height: 15px;
 }
 
 @media screen and (min-width: 1440px) {
-    .menu-link-container-price, 
-.lists-price-link  {
-    font-size: 20px;
-    line-height: 1.5;
+    .menu-price-icon  {
+       width: 27px;
+       height: 27px;
     }
   }
 
-
-.menu-link-container-price {
-   display: flex;
-  justify-self: center;
-  align-items: center;
-  margin-bottom: 5px;
+  .menu-link-container-price {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
 }
+
+.menu-link-container-price::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #F7F9FC; /* Белая полоска */
+    bottom: 0;
+    left: 0;
+    opacity: 0; /* Изначально полоска невидимая */
+    transform: scaleX(0); /* Изначально полоска уменьшена */
+    transform-origin: center; /* Центрирование трансформации */
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для всех свойств */
+}
+
+.menu-link-container-price:hover::after {
+    opacity: 1; /* Полоска становится видимой */
+    transform: scaleX(1); /* Полоска увеличивается в ширину */
+    background-color: #1EAF8A; /* Зелёная полоска при наведении */
+}
+
 
 .lists-price-contaianer {
     position: absolute;
@@ -646,22 +723,39 @@ max-height: 300px;
   gap: 5px 30px;
   list-style: disc;
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 10px;
 }
 
 .menu-link-price {
- transition: color 0.3s ease; 
+    position: relative;
+    transition: color 0.3s ease; /* Плавный переход для изменения цвета */
+}
+
+.menu-link-price::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #F7F9FC; /* Белая полоска */
+    transform: scaleX(0); /* Изначально полоска скрыта */
+    transform-origin: center; /* Центрирование трансформации */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для ширины и цвета полоски */
+}
+
+.menu-link-price:hover::after,
+.menu-link-price:focus::after {
+    transform: scaleX(1); /* Полоска увеличивается в ширину при наведении */
+    background-color: #1EAF8A; /* Зелёная полоска при наведении */
 }
 
 .menu-link-price:hover,
 .menu-link-price:focus {
-   color: #F7F9FC;
+    color: #F7F9FC; /* Цвет текста меняется на белый при наведении */
 }
 
-.menu-link-container-price {
 
-    
-}
 
 .menu-mobile {
     flex-direction: column;
