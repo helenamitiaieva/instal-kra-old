@@ -520,6 +520,36 @@ display: none;
     }
   }
 
+  .menu-header-container-price {
+    color: #F7F9FC;
+      font-family: "Work Sans";
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+  }
+
+  @media screen and (min-width: 768px) {
+    .menu-header-container-price  {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .menu-header-container-price  {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .menu-header-container-price  {
+        font-size: 20px;
+    }
+}
+ 
+
   .menu-link-container-price, 
   .lists-price-link {
       color: #F7F9FC;
@@ -535,29 +565,25 @@ display: none;
   }
   
   /* Анимация для полоски */
-  .menu-link-container-price::after, 
-  .lists-price-link::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: #F7F9FC; /* Белая полоска */
-      bottom: 0;
-      left: 0;
-      opacity: 0; /* Изначально полоска невидимая */
-      transform: scaleX(0); /* Изначально полоска уменьшена */
-      transform-origin: center; /* Центрирование трансформации */
-      transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для всех свойств */
-  }
-  
-  /* Плавное появление полоски и изменение цвета текста при наведении */
-  .menu-link-container-price:hover::after, 
-  .lists-price-link:hover::after {
-      opacity: 1; /* Полоска становится видимой */
-      transform: scaleX(1); /* Полоска увеличивается в ширину */
-      background-color: #1EAF8A; /* Полоска становится зелёной */
-  }
-  
+.lists-price-link::before {
+    content: '';
+    position: absolute;
+    width: 2px; /* Ширина полоски */
+    height: 100%; /* Полоска будет растягиваться по вертикали */
+    background-color: #F7F9FC; /* Белая полоска */
+    left: -5px; /* Полоска будет располагаться слева */
+    top: 50%; /* Расположим по вертикали на 50% */
+    transform: translateY(-50%) scaleY(0); /* Начальное состояние: полоска скрыта */
+    opacity: 0; /* Полоска изначально невидимая */
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для всех свойств */
+}
+
+/* Анимация при наведении */
+.lists-price-link:hover::before {
+    opacity: 1; /* Полоска становится видимой */
+    background-color: #1EAF8A; /* Полоска становится зелёной */
+    transform: translateY(-50%) scaleY(1); /* Полоска расширяется по вертикали из центра */
+}
 
   
   @media screen and (min-width: 768px) {   
@@ -588,7 +614,9 @@ display: none;
 .menu-price-container-icon {
 display: flex;
 gap: 5px;
-padding-left: 30px;
+
+justify-content: center;
+align-items: center;
 margin-top: 5px;
 margin-bottom: 5px;
 }
@@ -656,17 +684,20 @@ display: none;
 max-height: 300px; 
   overflow-y: auto; 
   border-radius: 8px;
+  width: 350px;
 }
 
 @media screen and (min-width: 768px) {
     .lists-price-contaianer  {
-        left: 60%; 
+        left: 40%; 
+        width: 400px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .lists-price-contaianer  { 
         left: 70%;
+        width: 450px;
     }
 }
 
@@ -693,17 +724,20 @@ display: none;
 max-height: 300px; 
   overflow-y: auto; 
   border-radius: 8px; 
+  width: 350px;
 }
 
 @media screen and (min-width: 768px) {
     .lists-price-contaianer-do  {
-        left: 60%; 
+        left: 40%; 
+        width: 400px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .lists-price-contaianer-do  { 
         left: 70%;
+        width: 450px;
     }
 }
 
@@ -722,7 +756,7 @@ max-height: 300px;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px 30px;
   list-style: disc;
-  padding-left: 50px;
+  padding-left: 40px;
   padding-right: 10px;
 }
 
@@ -758,6 +792,7 @@ max-height: 300px;
 
 
 .menu-mobile {
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     padding-top: 15px;
@@ -768,15 +803,20 @@ max-height: 300px;
     border-radius: 60px;
     height: 3px;
     background-color: white;
-    margin: 4px 0;
+    margin: 2px 0;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета */
 }
 
+.menu-mobile:hover div {
+    background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый цвет */
+}
 
 @media screen and (min-width: 768px) {
     .menu-mobile  {
         display: none;
     }
 }
+
 
 .nav {
     position: relative;
@@ -826,8 +866,57 @@ flex-shrink: 0;
     line-height: 1;
     text-transform: uppercase;
     text-align: end;
+    position: relative; /* Чтобы псевдо-элемент появился относительно текста */
+    transition: color 0.3s ease; /* Плавный переход для изменения цвета */
 }
 
+/* Псевдо-элемент для создания полоски */
+.burger-menu-link::after,
+.burger-address-link::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #1EAF8A; /* Цвет полоски */
+    transform: scaleX(0); /* Изначально полоска скрыта */
+    transform-origin: center; /* Центрирование трансформации */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для ширины и цвета полоски */
+}
+
+/* Анимация полоски при наведении */
+.burger-menu-link:hover::after,
+.burger-address-link:hover::after {
+    transform: scaleX(1); /* Полоска увеличивается в ширину */
+    background-color: #1EAF8A; /* Полоска меняет цвет на зелёный */
+}
+
+/* Цвет текста меняется при наведении */
+.burger-menu-link:hover,
+.burger-address-link:hover {
+    color: #F7F9FC;
+}
+
+.burger-address-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.burger-addess-icon {
+    fill: #1EAF8A;
+    transition: fill 0.3s ease;
+    width: 15px;
+    height: 15px;
+}
+
+.burger-addess-icon:hover,
+.burger-addess-icon:focus {
+    fill: #C12930;
+}
 
 .hero {
     background-image: url(../image/hero-390-1x.jpg);

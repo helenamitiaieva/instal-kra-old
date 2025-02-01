@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerMenu = document.getElementById('burgerMenu');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobilePriceButton = document.getElementById('mobilePriceButton');
+    const backToPopup = document.getElementById('backToPopup');
 
     // Toggle burger menu
     burgerMenu.addEventListener('click', () => {
@@ -127,6 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (listsPricePopup) listsPricePopup.style.display = 'none';
     });
 
+    backToPopup.addEventListener('click', (event) => {
+        event.preventDefault();
+        listsPopup.classList.remove('show');
+        popup.classList.add('show');
+    });
+
     // Close all popups when clicking outside
     document.addEventListener('click', (event) => {
         if (
@@ -142,4 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (listsPopup) listsPopup.style.display = 'none';
         }
     });
+
+
 });
+
