@@ -429,6 +429,7 @@ letter-spacing: 0.05em;
     font-variant: all-small-caps;
     letter-spacing: 0.05em;
     display: none;
+    padding-bottom: 5px;
 }
 
 @media screen and (min-width: 768px) {
@@ -489,19 +490,22 @@ letter-spacing: 0.05em;
     display: flex;
     flex-direction: column;
     top: 100%;
-    left: 70%;
+    left: 60%;
     z-index: 10;
     padding: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
 display: none;
+width: 130px;
 
 }
 
 @media screen and (min-width: 768px) {
     .menu-price-contaianer  {
-        left: 60%;
+        left: 80%;
         width: 200px;
     }
 }
@@ -542,12 +546,6 @@ display: none;
         font-size: 16px;
     }
 }
-
-@media screen and (min-width: 1440px) {
-    .menu-header-container-price  {
-        font-size: 20px;
-    }
-}
  
 
   .menu-link-container-price, 
@@ -571,7 +569,7 @@ display: none;
     width: 2px; /* Ширина полоски */
     height: 100%; /* Полоска будет растягиваться по вертикали */
     background-color: #F7F9FC; /* Белая полоска */
-    left: -5px; /* Полоска будет располагаться слева */
+    left: -7px; /* Полоска будет располагаться слева */
     top: 50%; /* Расположим по вертикали на 50% */
     transform: translateY(-50%) scaleY(0); /* Начальное состояние: полоска скрыта */
     opacity: 0; /* Полоска изначально невидимая */
@@ -601,14 +599,7 @@ display: none;
           line-height: 1.25;
       }
   }
-  
-  @media screen and (min-width: 1440px) {
-      .menu-link-container-price, 
-      .lists-price-link {
-          font-size: 20px;
-          line-height: 1.5;
-      }
-  }
+
   
 
 .menu-price-container-icon {
@@ -645,16 +636,15 @@ margin-bottom: 5px;
     justify-self: center;
     align-items: center;
     position: relative;
-    margin-bottom: 10px;
 }
 
 .menu-link-container-price::after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 70%;
     height: 2px;
     background-color: #F7F9FC; /* Белая полоска */
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     opacity: 0; /* Изначально полоска невидимая */
     transform: scaleX(0); /* Изначально полоска уменьшена */
@@ -662,10 +652,17 @@ margin-bottom: 5px;
     transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для всех свойств */
 }
 
+@media screen and (min-width: 1024px) {
+    .menu-link-container-price::after {
+       width: 100%;
+    }
+  }
+
+
 .menu-link-container-price:hover::after {
     opacity: 1; /* Полоска становится видимой */
     transform: scaleX(1); /* Полоска увеличивается в ширину */
-    background-color: #1EAF8A; /* Зелёная полоска при наведении */
+    background-color: #F7F9FC; /* Зелёная полоска при наведении */
 }
 
 
@@ -684,7 +681,7 @@ display: none;
 max-height: 300px; 
   overflow-y: auto; 
   border-radius: 8px;
-  width: 350px;
+  width: 300px;
 }
 
 @media screen and (min-width: 768px) {
@@ -704,10 +701,9 @@ max-height: 300px;
 @media screen and (min-width: 1440px) {
     .lists-price-contaianer {
         left: 75%;
+        width: 500px;
     }
   }
-
-
 
 .lists-price-contaianer-do {
     position: absolute;
@@ -724,7 +720,7 @@ display: none;
 max-height: 300px; 
   overflow-y: auto; 
   border-radius: 8px; 
-  width: 350px;
+  width: 300px;
 }
 
 @media screen and (min-width: 768px) {
@@ -761,32 +757,26 @@ max-height: 300px;
 }
 
 .menu-link-price {
-    position: relative;
-    transition: color 0.3s ease; /* Плавный переход для изменения цвета */
+padding: 10px;
+background-color: #1EAF8A; 
+color: #F7F9FC;
+border-radius: 10px;
+cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;; /* Плавный переход для изменения цвета */
 }
 
-.menu-link-price::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    background-color: #F7F9FC; /* Белая полоска */
-    transform: scaleX(0); /* Изначально полоска скрыта */
-    transform-origin: center; /* Центрирование трансформации */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для ширины и цвета полоски */
-}
-
-.menu-link-price:hover::after,
-.menu-link-price:focus::after {
-    transform: scaleX(1); /* Полоска увеличивается в ширину при наведении */
-    background-color: #1EAF8A; /* Зелёная полоска при наведении */
-}
+@media screen and (min-width: 1440px) {
+    .menu-link-price {
+        padding: 15px; 
+    }
+  }
 
 .menu-link-price:hover,
 .menu-link-price:focus {
-    color: #F7F9FC; /* Цвет текста меняется на белый при наведении */
+    color: #1EAF8A;
+
+    background-color: transparent;
+
 }
 
 
@@ -831,7 +821,7 @@ width: 140px;
 top: 100%;
 left: 60%;
 gap: 10px;
-background: 4;
+background: rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(15px);
 padding: 20px;
 display: none;
@@ -904,6 +894,19 @@ flex-shrink: 0;
     justify-content: center;
     align-items: center;
     gap: 2px;
+}
+
+.burger-menu-logo-telefon {
+    display: flex;
+    gap: 3px;
+}
+
+.menu-price-container-price {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .burger-addess-icon {

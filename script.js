@@ -122,17 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
     producersLink?.addEventListener('click', (event) => {
         event.preventDefault();
         if (listsPopup) {
-            listsPopup.style.display = listsPopup.style.display === 'block' ? 'none' : 'block';
+            listsPopup.style.display = listsPopup.style.display === 'flex' ? 'none' : 'flex';
         }
         popup.style.display = 'none';
         if (listsPricePopup) listsPricePopup.style.display = 'none';
     });
 
-    backToPopup.addEventListener('click', (event) => {
-        event.preventDefault();
-        listsPopup.classList.remove('show');
-        popup.classList.add('show');
-    });
 
     // Close all popups when clicking outside
     document.addEventListener('click', (event) => {
