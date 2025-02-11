@@ -266,7 +266,6 @@ display: none;
     }
 }
 
-
 .menu .menu-item {
     position: relative;
 }
@@ -451,19 +450,6 @@ letter-spacing: 0.05em;
     }
   }
 
-@media screen and (min-width: 1440px) {
-    .address-link  {
-        
-    }
-  }
-
-@media screen and (min-width: 1920px) {
-    .address-link  {
-       
-      
-    }
-}
-
 
 .address-link:hover,
 .address-link:focus {
@@ -493,20 +479,20 @@ letter-spacing: 0.05em;
     left: 60%;
     z-index: 10;
     padding: 10px;
-    padding-left: 20px;
-    padding-top: 20px;
+    padding-top: 25px;
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(15px);
 display: none;
 width: 130px;
-
 }
 
 @media screen and (min-width: 768px) {
     .menu-price-contaianer  {
         left: 80%;
         width: 200px;
+padding-left: 20px;
+padding-top: 20px;
     }
 }
 
@@ -524,7 +510,44 @@ width: 130px;
     }
   }
 
-  .menu-header-container-price {
+  .menu-price-container-button {
+    position: relative;
+  }
+
+  @media screen and (min-width: 768px) {
+    .menu-price-container-button   {
+display: none;
+    }
+}
+
+  .menu-price-button-back {
+    position: absolute;
+    right: -1px;
+    bottom: -5px;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+
+  .menu-price-button-back:hover,
+  .menu-price-button-back:focus {
+    background-color: #C12930;
+  }
+
+  .menu-price-icon-back {
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    fill: #F7F9FC;
+    border-color: transparent;
+  }
+
+  .menu-header-button-price {
     color: #F7F9FC;
       font-family: "Work Sans";
       font-size: 10px;
@@ -533,18 +556,42 @@ width: 130px;
       line-height: 1.5;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      position: relative;
   }
 
   @media screen and (min-width: 768px) {
-    .menu-header-container-price  {
+    .menu-header-button-price  {
         font-size: 13px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .menu-header-container-price  {
+    .menu-header-button-price  {
         font-size: 16px;
     }
+}
+
+.menu-header-button-price::before {
+    content: '';
+    position: absolute;
+    width: 2px; /* Ширина полоски */
+    height: 100%; /* Полоска будет растягиваться по вертикали */
+    background-color: #F7F9FC; /* Белая полоска */
+    left: 0; /* Полоска будет располагаться слева */
+    top: 50%; /* Расположим по вертикали на 50% */
+    transform: translateY(-50%) scaleY(0); /* Начальное состояние: полоска скрыта */
+    opacity: 0; /* Полоска изначально невидимая */
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для всех свойств */
+}
+
+/* Анимация при наведении */
+.menu-header-button-price:hover::before {
+    opacity: 1; /* Полоска становится видимой */
+    background-color: #F7F9FC; /* Полоска становится зелёной */
+    transform: translateY(-50%) scaleY(1); /* Полоска расширяется по вертикали из центра */
 }
  
 
@@ -701,7 +748,7 @@ max-height: 300px;
 @media screen and (min-width: 1440px) {
     .lists-price-contaianer {
         left: 75%;
-        width: 500px;
+        width: 450px;
     }
   }
 
@@ -756,6 +803,12 @@ max-height: 300px;
   padding-right: 10px;
 }
 
+@media screen and (min-width: 1024px) {
+    .list-lists-price  {
+        padding-left: 60px;  
+    }
+}
+
 .menu-link-price {
 padding: 10px;
 background-color: #1EAF8A; 
@@ -779,8 +832,6 @@ cursor: pointer;
 
 }
 
-
-
 .menu-mobile {
     display: flex;
     flex-direction: column;
@@ -791,7 +842,7 @@ cursor: pointer;
 .menu-mobile div {
     width: 25px;
     border-radius: 60px;
-    height: 3px;
+    height: 2px;
     background-color: white;
     margin: 2px 0;
     transition: background-color 0.3s ease; /* Плавное изменение цвета */
@@ -883,10 +934,18 @@ flex-shrink: 0;
     background-color: #1EAF8A; /* Полоска меняет цвет на зелёный */
 }
 
-/* Цвет текста меняется при наведении */
-.burger-menu-link:hover,
-.burger-address-link:hover {
-    color: #F7F9FC;
+.burger-menu-item .burger-menu-link-company:hover::after {
+    background-color: #C12930; /* Полоска красного цвета */
+}
+
+.burger-menu-link {
+    line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+    .burger-menu-link  {
+        line-height: 1; 
+    }
 }
 
 .burger-address-link {
@@ -896,9 +955,10 @@ flex-shrink: 0;
     gap: 2px;
 }
 
-.burger-menu-logo-telefon {
+.burger-menu-logo-mobile {
     display: flex;
     gap: 3px;
+margin-top: 10px;
 }
 
 .menu-price-container-price {
@@ -919,6 +979,36 @@ flex-shrink: 0;
 .burger-addess-icon:hover,
 .burger-addess-icon:focus {
     fill: #C12930;
+}
+
+.burger-menu-link-button {
+    display: flex;
+position: absolute;
+right: 20px;
+ justify-content: center;
+width: 51px;
+    color: #F7F9FC;
+    font-family: "Work Sans";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: color 0.3s ease; 
+    background-color: #1EAF8A;
+    color: #F7F9FC;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+}
+
+.burger-menu-link-button:hover,
+.burger-menu-link-button:focus {
+background-color: transparent;
+color: #1EAF8A;
 }
 
 .hero {

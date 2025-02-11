@@ -79,10 +79,10 @@
                         <li class="burger-menu-item"><a href="#plumbing" class="burger-menu-link">Technika sanitarna</a></li>
                         <li class="burger-menu-item"><a href="#bathroom" class="burger-menu-link">Łazienki</a></li>
                         <li class="burger-menu-item"><a href="#equipment" class="burger-menu-link">Osprzęt</a></li>
-                        <li class="burger-menu-item"><a href="#company" class="burger-menu-link">o Firmie</a></li>
-                        <li class="burger-menu-item"><a href="#price" id="mobilePriceButton" class="burger-menu-link">cennik</a></li>
+                        <li class="burger-menu-item"><a href="#company" class="burger-menu-link burger-menu-link-company">o Firmie</a></li>
+                        <li class="burger-menu-item"><button id="mobilePriceButton" class="burger-menu-link-button">cenniki</button></li>
                     </ul>
-                    <div class="burger-menu-logo-telefon">
+                    <div class="burger-menu-logo-mobile">
                         <svg class="burger-addess-icon">
                             <use href="./image/icons.svg#icon-phone" >
                             </use>
@@ -95,6 +95,14 @@
                 </div>
                 <!-- PRICE -->
                 <div class="menu-price-contaianer" id="popup">
+                    <div class="menu-price-container-button">
+                        <button class="menu-price-button-back">
+                            <svg class="menu-price-icon-back">
+                                        <use href="./image/icons.svg#icon-right">
+                                        </use>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="menu-price-container-price">
                         <svg class="menu-price-icon"
                                     width="31"
@@ -123,7 +131,7 @@
                                     <use href="./image/icons.svg#icon-cenniki-1" >
                                     </use>
                         </svg>
-                        <a href="#" class="menu-header-container-price" id="backToPopup">CENNIKI PRODUCENTÓW</a>
+                        <button onclick="showScreen('popup')" class="menu-header-button-price">CENNIKI PRODUCENTÓW</button>
                     </div>
                     <ul class="list-lists-price">
                         <li class="item-lists-price"><a href="https://agaflex.pl/do-pobrania/" target="_blank" class="lists-price-link">AGAflex</a></li>
@@ -213,7 +221,7 @@
                                     <use href="./image/icons.svg#icon-cenniki-2" >
                                     </use>
                         </svg>
-                        <a href="#" class="menu-header-container-price">Cenniki do pobrania</a>
+                        <button id="backToPopupFromListsPrice" class="menu-header-button-price">Cenniki do pobrania</button>
                     </div>
                     <ul class="list-lists-price">
                         <!-- <li class="item-lists-price"><a href="" target="_blank" class="lists-price-link">AGAflex</a></li>

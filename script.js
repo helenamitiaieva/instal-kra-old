@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobileMenu');
     const mobilePriceButton = document.getElementById('mobilePriceButton');
     const backToPopup = document.getElementById('backToPopup');
+    const backToPopupFromListsPrice = document.getElementById('backToPopupFromListsPrice');
+    const backToBurgerMenu = document.querySelector('.menu-price-button-back');
 
     // Toggle burger menu
     burgerMenu.addEventListener('click', () => {
@@ -128,6 +130,26 @@ document.addEventListener('DOMContentLoaded', () => {
         if (listsPricePopup) listsPricePopup.style.display = 'none';
     });
 
+    // Возврат из #listsPopup в #popup
+    document.querySelector('.menu-header-button-price')?.addEventListener('click', () => {
+        listsPopup.style.display = 'none';
+        popup.style.display = 'block';
+    });
+
+
+backToPopupFromListsPrice?.addEventListener('click', () => {
+    listsPricePopup.style.display = 'none';
+    popup.style.display = 'block';
+});
+
+
+backToBurgerMenu?.addEventListener('click', () => {
+    popup.style.display = 'none'; // Скрываем popup (если он был открыт)
+    listsPricePopup.style.display = 'none'; // Скрываем listsPricePopup (если открыт)
+    listsPopup.style.display = 'none'; // Скрываем listsPopup (если открыт)
+    mobileMenu.style.display = 'block'; // Показываем бургер-меню
+});
+
 
     // Close all popups when clicking outside
     document.addEventListener('click', (event) => {
@@ -144,6 +166,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (listsPopup) listsPopup.style.display = 'none';
         }
     });
+
+    function showScreen(screenId) {
+    // Скрываем все экраны
+    document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.remove('active');
+    });
+
+    // Показываем нужный экран
+    document.getElementById(screenId).classList.add('active');
+}
 
 
 });
