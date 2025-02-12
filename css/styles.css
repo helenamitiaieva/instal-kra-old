@@ -489,8 +489,8 @@ width: 130px;
 
 @media screen and (min-width: 768px) {
     .menu-price-contaianer  {
-        left: 80%;
-        width: 200px;
+        left: 70%;
+        width: 250px;
 padding-left: 20px;
 padding-top: 20px;
     }
@@ -499,7 +499,7 @@ padding-top: 20px;
 @media screen and (min-width: 1024px) {
     .menu-price-contaianer  { 
         left: 70%;
-        width: 250px;
+        width: 275px;
     }
 }
 
@@ -547,7 +547,32 @@ display: none;
     border-color: transparent;
   }
 
-  .menu-header-button-price {
+  @media screen and (min-width: 768px) {
+    .menu-price-icon-back  {
+        width: 25px;
+    height: 25px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .menu-price-icon-back  { 
+       
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .menu-price-icon-back {
+       
+    }
+  }
+
+@media screen and (min-width: 1920px) {
+    .menu-price-icon-back  {
+         
+    }
+}
+
+  .menu-header-span-price {
     color: #F7F9FC;
       font-family: "Work Sans";
       font-size: 10px;
@@ -556,44 +581,19 @@ display: none;
       line-height: 1.5;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      background-color: transparent;
-      cursor: pointer;
-      border: none;
-      position: relative;
   }
 
   @media screen and (min-width: 768px) {
-    .menu-header-button-price  {
+    .menu-header-span-price  {
         font-size: 13px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .menu-header-button-price  {
+    .menu-header-span-price  {
         font-size: 16px;
     }
 }
-
-.menu-header-button-price::before {
-    content: '';
-    position: absolute;
-    width: 2px; /* Ширина полоски */
-    height: 100%; /* Полоска будет растягиваться по вертикали */
-    background-color: #F7F9FC; /* Белая полоска */
-    left: 0; /* Полоска будет располагаться слева */
-    top: 50%; /* Расположим по вертикали на 50% */
-    transform: translateY(-50%) scaleY(0); /* Начальное состояние: полоска скрыта */
-    opacity: 0; /* Полоска изначально невидимая */
-    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для всех свойств */
-}
-
-/* Анимация при наведении */
-.menu-header-button-price:hover::before {
-    opacity: 1; /* Полоска становится видимой */
-    background-color: #F7F9FC; /* Полоска становится зелёной */
-    transform: translateY(-50%) scaleY(1); /* Полоска расширяется по вертикали из центра */
-}
- 
 
   .menu-link-container-price, 
   .lists-price-link {
@@ -699,7 +699,7 @@ margin-bottom: 5px;
     transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Плавный переход для всех свойств */
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .menu-link-container-price::after {
        width: 100%;
     }
@@ -751,6 +751,52 @@ max-height: 300px;
         width: 450px;
     }
   }
+
+  .lists-price-container-back {
+    position: relative;
+  }
+
+.lists-price-button-back {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    bottom: -25px;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+    .lists-price-button-back  {
+        right: 20px;
+    bottom: -40px;
+    width: 30px;
+    height: 30px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .lists-price-button-back {
+        bottom: -43px;
+    }
+  }
+
+@media screen and (min-width: 1920px) {
+    .lists-price-button-back  {
+         
+    }
+}
+
+
+.lists-price-button-back:hover,
+.lists-price-button-back:focus {
+    background-color: #C12930;
+}
 
 .lists-price-contaianer-do {
     position: absolute;
@@ -815,7 +861,7 @@ background-color: #1EAF8A;
 color: #F7F9FC;
 border-radius: 10px;
 cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;; /* Плавный переход для изменения цвета */
+transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;; /* Плавный переход для изменения цвета */
 }
 
 @media screen and (min-width: 1440px) {
@@ -867,6 +913,7 @@ cursor: pointer;
     position: absolute;
 display: flex;
 flex-direction: column;
+gap: 15px;
 border-radius: 20px;
 width: 140px;
 top: 100%;
@@ -994,7 +1041,7 @@ width: 51px;
     font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
-    transition: color 0.3s ease; 
+    transition: backgrond-color 0.3s ease, color 0.3s ease;
     background-color: #1EAF8A;
     color: #F7F9FC;
     border-radius: 5px;
@@ -2047,25 +2094,50 @@ justify-content: start;
 /* HEATING BUTTON-LEFT */
 
 .button-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 10px;
-    transform: translateY(-50%);
-background: none;
+background-color: transparent;
+border-radius: 50%;
 border: none;
-padding: 0;
-margin: 0;
 cursor: pointer;
+width: 30px;
+height: 30px;
+transition: background-color 0.3s ease;
 }
 
+@media screen and (min-width: 768px) {
+    .button-left  {
+        width: 40px;
+        height: 40px; 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .button-left  { 
+        width: 50px;
+        height: 50px;   
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .button-left {
+        width: 60px;
+        height: 60px; 
+    }
+  }
+
 .heating-button-left {
-    top: 51%;
+    top: 45.5%;
 }
 
 @media screen and (min-width: 768px) {
     .heating-button-left {
         left: -10px; 
-         top: 50%; 
+         top: 46.5%; 
     }
   }
 
@@ -2077,7 +2149,7 @@ cursor: pointer;
 
 @media screen and (min-width: 1440px) {
     .heating-button-left {
-        left: 0px;  
+        left: -15px;  
     }
   }
 
@@ -2087,46 +2159,86 @@ cursor: pointer;
     }
 }
 
-.button-left .left-icon {
-  fill: #F7F9FC; 
-  transition: fill 0.3s ease; 
+ .left-icon {
+    fill: #F7F9FC;
+    width: 20px;
+    height: 20px;
+
 }
 
-@media (min-width: 0px) and (max-width: 767px) {  
-    .button-left .left-icon { 
-      width: 23px;
-      height: 23px;
-    } 
+@media screen and (min-width: 768px) {
+    .left-icon {
+        width: 30px;
+        height: 30px;  
     }
+}
 
+@media screen and (min-width: 1024px) {
+    .left-icon { 
+        width: 40px;
+        height: 40px;  
+    }
+}
 
-.button-left .left-icon:hover,
-button-left .left-icon:focus {
-fill: #C12930;
+@media screen and (min-width: 1920px) {
+    .left-icon {
+        width: 50px;
+        height: 50px; 
+    }
+  }
+
+.button-left:hover,
+.button-left:focus {
+background-color: #C12930;
 }
 
 /* HEATING BUTTON-RIGHT */
 
 .button-right {
+display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 50%;
     right: 10px;
-    transform: translateY(-50%);
-background: none;
+background-color: transparent;
+border-radius: 50%;
 border: none;
-padding: 0;
-margin: 0;
 cursor: pointer;
+width: 30px;
+height: 30px;
+transition: background-color 0.3s ease;
 }
 
+@media screen and (min-width: 768px) {
+    .button-right  {
+        width: 40px;
+        height: 40px; 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .button-right  { 
+        width: 50px;
+        height: 50px;   
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .button-right {
+        width: 60px;
+        height: 60px; 
+    }
+  }
+
 .heating-button-right {
-    top: 51%;
+    top: 45.5%;
 }
 
 @media screen and (min-width: 768px) {
     .heating-button-right {
         right: -10px;  
-        top: 50%;
+        top: 46.5%;
     }
   }
 
@@ -2138,7 +2250,7 @@ cursor: pointer;
 
 @media screen and (min-width: 1440px) {
     .heating-button-right {
-        right: 0px;  
+        right: -15px;  
     }
   }
 
@@ -2148,22 +2260,37 @@ cursor: pointer;
     }
 }
 
-.button-right .right-icon {
-    fill: #F7F9FC; 
-    transition: fill 0.3s ease; 
-  }
+.right-icon {
+   fill: #F7F9FC;
+   width: 20px;
+   height: 20px;
 
-  @media (min-width: 0px) and (max-width: 767px) {  
-    .button-right .right-icon { 
-        width: 23px;
-        height: 23px;
-    } 
-    }
+}
 
-  
-  .button-right .right-icon:hover,
-  button-right .right-icon:focus {
-  fill: #C12930;
+@media screen and (min-width: 768px) {
+   .right-icon {
+       width: 30px;
+       height: 30px;  
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   .right-icon { 
+       width: 40px;
+       height: 40px;  
+   }
+}
+
+@media screen and (min-width: 1920px) {
+   .right-icon {
+       width: 50px;
+       height: 50px; 
+   }
+ }
+
+  .button-right:hover,
+  .button-right:focus {
+  background-color: #C12930;
   }
 
   .heating-container-cards {
@@ -2808,19 +2935,26 @@ text-transform: uppercase;
 /* PLUMBING BUTTON LEFT */
 
 .plumbing-button-left {
-    top: 50%;
+    top: 44.5%;
 }
 
 @media screen and (min-width: 768px) {
     .plumbing-button-left {
         left: 0;  
+        top: 46.5%;
+    }
+  }
 
+  @media screen and (min-width: 1024px) {
+    .plumbing-button-left {
+        left: -15px;  
+        top: 45.5%;
     }
   }
 
   @media screen and (min-width: 1440px) {
     .plumbing-button-left {
-        left: -15px;  
+        left: -30px; 
     }
   }
 
@@ -2833,18 +2967,26 @@ text-transform: uppercase;
 /* PLUMBING BUTTON-RIGHT */
 
 .plumbing-button-right {
-    top: 50%;
+    top: 44.5%;
 }
 
 @media screen and (min-width: 768px) {
     .plumbing-button-right { 
         right: 0; 
+        top: 46.5%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .plumbing-button-right { 
+        right: -15px; 
+        top: 45.5%;
     }
   }
 
   @media screen and (min-width: 1440px) {
     .plumbing-button-right { 
-        right: -15px; 
+        right: -30px; 
     }
   }
 
@@ -3701,12 +3843,11 @@ justify-content: start;
 }
 /* BATHROOM BUTTON-LEFT */
 .bathroom-button-left {
-    top: 50%;
+    top: 40%;
 }
 
 @media screen and (min-width: 768px) {
     .bathroom-button-left {
-        top: 50%;
         left: 0;
     }
   }
@@ -3731,7 +3872,7 @@ justify-content: start;
 }
 
 .bathroom-button-right {
-    top: 50%;
+    top: 40%;
 }
 
 @media screen and (min-width: 768px) {
@@ -4262,12 +4403,11 @@ width: 100%;
 }
 /* arrow */
 .equipment-button-left {
-    top: 50%;
+    top: 40%;
 }
 
 @media screen and (min-width: 768px) {
     .equipment-button-left   {
-        top: 50%;
         left: 0;
     }
 }
@@ -4281,7 +4421,7 @@ width: 100%;
 
 @media screen and (min-width: 1440px) {
     .equipment-button-left  {
-        left: 0;
+        left: -15px;
         margin-left: 0;
     }
   }
@@ -4294,12 +4434,11 @@ width: 100%;
 
 /* ARROW */
 .equipment-button-right {
-    top: 50%;
+    top: 40%;
 }
 
 @media screen and (min-width: 768px) {
     .equipment-button-right { 
-        top: 50%;
     }
   }
 
@@ -4311,7 +4450,7 @@ width: 100%;
 
 @media screen and (min-width: 1440px) {
     .equipment-button-right {
-        right: 0px;  
+        right: -10px;  
     }
   }
 
@@ -5811,8 +5950,6 @@ padding-bottom: 20px;
     }
 }
 
-.footer-item {
-}
 
 .footer-link {
 color:#F7F9FC;
@@ -5828,20 +5965,6 @@ font-size: 10px;
         line-height: 1.25;  
     }
 }
-
-@media screen and (min-width: 1024px) {
-    .footer-link {
-        font-size: 20px;
-        line-height: 1.15;  
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .footer-link  { 
-        line-height: 1.25; 
-        font-size: 22px;
-    }
-  }
 
 .footer-link:hover,
 .footer-link:focus {

@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Возврат из #listsPopup в #popup
-    document.querySelector('.menu-header-button-price')?.addEventListener('click', () => {
+    document.querySelector('.lists-price-button-back')?.addEventListener('click', () => {
         listsPopup.style.display = 'none';
         popup.style.display = 'block';
     });

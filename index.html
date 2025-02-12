@@ -91,7 +91,6 @@
                             +48 883 627 527
                         </a>
                     </div>
-
                 </div>
                 <!-- PRICE -->
                 <div class="menu-price-contaianer" id="popup">
@@ -124,6 +123,14 @@
                 </div>
                 <!-- PRICE LISTS -->
                 <div class="lists-price-contaianer"  id="listsPopup">
+                    <div class="lists-price-container-back">
+                        <button onclick="showScreen('popup')" class="lists-price-button-back">
+                            <svg class="menu-price-icon-back">
+                                <use href="./image/icons.svg#icon-right">
+                                </use>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="menu-price-container-icon">
                         <svg class="menu-price-icon" 
                                 width="31"
@@ -131,7 +138,7 @@
                                     <use href="./image/icons.svg#icon-cenniki-1" >
                                     </use>
                         </svg>
-                        <button onclick="showScreen('popup')" class="menu-header-button-price">CENNIKI PRODUCENTÓW</button>
+                        <span class="menu-header-span-price">CENNIKI PRODUCENTÓW</span>
                     </div>
                     <ul class="list-lists-price">
                         <li class="item-lists-price"><a href="https://agaflex.pl/do-pobrania/" target="_blank" class="lists-price-link">AGAflex</a></li>
@@ -214,6 +221,14 @@
                 </div>
                 <!-- PRICE LISTS -->
                 <div class="lists-price-contaianer-do"  id="listsPricePopup">
+                    <div class="lists-price-container-back">
+                        <button onclick="showScreen('popup')" id="backToPopupFromListsPrice" class="lists-price-button-back">
+                            <svg class="menu-price-icon-back">
+                                <use href="./image/icons.svg#icon-right">
+                                </use>
+                            </svg>
+                        </button>
+                    </div>
                     <div class="menu-price-container-icon">
                         <svg class="menu-price-icon" 
                                 width="31"
@@ -221,7 +236,7 @@
                                     <use href="./image/icons.svg#icon-cenniki-2" >
                                     </use>
                         </svg>
-                        <button id="backToPopupFromListsPrice" class="menu-header-button-price">Cenniki do pobrania</button>
+                        <span class="menu-header-span-price">Cenniki do pobrania</span>
                     </div>
                     <ul class="list-lists-price">
                         <!-- <li class="item-lists-price"><a href="" target="_blank" class="lists-price-link">AGAflex</a></li>
@@ -523,9 +538,7 @@
                 <div class="heating-container-carusel">
                     <div class="heating-container">
                         <button class="button-left heating-button-left" id="heating-button-left">
-                            <svg class="left-icon"
-                            width="36"
-                            height="36">
+                            <svg class="left-icon">
                             <use href="./image/icons.svg#icon-left">
                             </use>
                             </svg>
