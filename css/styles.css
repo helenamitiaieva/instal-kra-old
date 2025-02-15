@@ -2187,9 +2187,12 @@ transition: background-color 0.3s ease;
     }
   }
 
-.button-left:hover,
-.button-left:focus {
+.button-left:hover { 
 background-color: #C12930;
+}
+
+.button-left:focus {
+    background-color: transparent;
 }
 
 /* HEATING BUTTON-RIGHT */
@@ -2288,9 +2291,12 @@ transition: background-color 0.3s ease;
    }
  }
 
-  .button-right:hover,
-  .button-right:focus {
+  .button-right:hover {
   background-color: #C12930;
+  }
+
+  .button-right:focus {
+    background-color: transparent;
   }
 
   .heating-container-cards {
