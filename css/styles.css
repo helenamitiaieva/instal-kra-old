@@ -2275,9 +2275,10 @@ appearance: none;
 .icon-right-mobile {
     width: 30px;
     height: 30px;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
     color: #F7F9FC;
     font-size: 20px;
+
 }
 
 .icon-right-mobile:hover,
@@ -2320,19 +2321,23 @@ display: none;
    }
  }
 
-  .button-right:hover {
-  background-color: #C12930;
-  }
 
-  .button-right:active {
-    background-color: transparent;
+ @media screen and (min-width: 768px) {
+    .button-right:hover {
+        background-color: #C12930; 
+    }
+}
 
-  }
+@media screen and (min-width: 768px) {
+    .button-right:active,
+    .button-right:focus  {
+      background-color: transparent;
+    }
+}
 
 
-  .button-right:focus {
-    background-color: transparent;
-  }
+
+
 
   .heating-container-cards {
 display: flex;
