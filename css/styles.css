@@ -774,24 +774,10 @@ max-height: 300px;
 
 @media screen and (min-width: 768px) {
     .lists-price-button-back  {
-        right: 20px;
-    bottom: -40px;
-    width: 30px;
-    height: 30px;
+display: none;
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .lists-price-button-back {
-        bottom: -43px;
-    }
-  }
-
-@media screen and (min-width: 1920px) {
-    .lists-price-button-back  {
-         
-    }
-}
 
 @media screen and (min-width: 768px) {
     .sts-price-button-back:hover,
