@@ -2160,7 +2160,7 @@ transition: background-color 0.3s ease;
 }
 
  .left-icon {
-    fill: #F7F9FC;
+    fill: currentColor;
     width: 20px;
     height: 20px;
     z-index: 1000;
