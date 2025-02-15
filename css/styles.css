@@ -2163,6 +2163,7 @@ transition: background-color 0.3s ease;
     fill: #F7F9FC;
     width: 20px;
     height: 20px;
+    z-index: 10;
 
 }
 
@@ -2190,6 +2191,10 @@ transition: background-color 0.3s ease;
 .button-left:hover { 
 background-color: #C12930;
 }
+
+.button-left:active { 
+    background-color: transparent;
+    }
 
 .button-left:focus {
     background-color: transparent;
@@ -2294,6 +2299,12 @@ transition: background-color 0.3s ease;
   .button-right:hover {
   background-color: #C12930;
   }
+
+  .button-right:active {
+    background-color: transparent;
+
+  }
+
 
   .button-right:focus {
     background-color: transparent;
