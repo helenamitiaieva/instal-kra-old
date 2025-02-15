@@ -2272,17 +2272,37 @@ appearance: none;
     }
 }
 
-.right-icon {
-   fill: #F7F9FC;
-   width: 20px;
-   height: 20px;
+.icon-right-mobile {
+    width: 30px;
+    height: 30px;
+    transition: background-color 0.3s ease;
+    color: #F7F9FC;
+    font-size: 20px;
+}
 
+.icon-right-mobile:hover,
+.icon-right-mobile:focus {
+    color: #C12930;
+}
+
+
+@media screen and (min-width: 768px) {
+    .icon-right-mobile {
+display: none;
+    }
+ }
+ 
+
+.right-icon {
+display: none;
 }
 
 @media screen and (min-width: 768px) {
    .right-icon {
+    fill: #F7F9FC;
        width: 30px;
-       height: 30px;  
+       height: 30px; 
+       display: inline-block; 
    }
 }
 
