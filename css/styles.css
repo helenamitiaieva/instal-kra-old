@@ -2216,7 +2216,11 @@ height: 30px;
 transition: background-color 0.3s ease;
 color: #F7F9FC;
 font-size: 20px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
 }
+
 
 @media screen and (min-width: 768px) {
     .button-right  {
