@@ -534,23 +534,24 @@ display: none;
     transition: background-color 0.3s ease;
   }
 
-  .menu-price-button-back:hover,
-  .menu-price-button-back:focus {
-    background-color: #C12930;
-  }
+  @media screen and (min-width: 768px) {
+    .menu-price-button-back:hover,
+    .menu-price-button-back:focus {
+        background-color: #C12930; 
+    }
+}
 
   .menu-price-icon-back {
-    width: 20px;
-    height: 20px;
-    left: 10px;
-    fill: #F7F9FC;
-    border-color: transparent;
+display: none;
   }
 
   @media screen and (min-width: 768px) {
     .menu-price-icon-back  {
         width: 25px;
     height: 25px;
+    left: 10px;
+    fill: #F7F9FC;
+    border-color: transparent;
     }
 }
 
@@ -792,10 +793,11 @@ max-height: 300px;
     }
 }
 
-
-.lists-price-button-back:hover,
-.lists-price-button-back:focus {
-    background-color: #C12930;
+@media screen and (min-width: 768px) {
+    .sts-price-button-back:hover,
+    .lists-price-button-back:focus  {
+        background-color: #C12930; 
+    }
 }
 
 .lists-price-contaianer-do {
@@ -2100,13 +2102,16 @@ justify-content: start;
     position: absolute;
     top: 50%;
     left: 10px;
-background-color: #C12930;
+background-color: transparent;
 border-radius: 50%;
 border: none;
 cursor: pointer;
 width: 30px;
 height: 30px;
 transition: background-color 0.3s ease;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -2185,9 +2190,16 @@ transition: background-color 0.3s ease;
         height: 50px; 
     }
   }
+  
+    .button-left:hover  {
+        background-color: transparent;
+    }
 
-.button-left:hover { 
-background-color: #C12930;
+
+  @media screen and (min-width: 768px) {
+    .button-left:hover  {
+        background-color: #C12930;
+    }
 }
 
 .button-left:active { 
@@ -2272,17 +2284,26 @@ appearance: none;
     }
 }
 
+.icon-left-mobile {
+    width: 30px;
+    height: 30px;
+    transition: color 0.3s ease;
+    color: #F7F9FC;
+    font-size: 20px;
+}
+
 .icon-right-mobile {
     width: 30px;
     height: 30px;
     transition: color 0.3s ease;
     color: #F7F9FC;
     font-size: 20px;
-
 }
 
 .icon-right-mobile:hover,
-.icon-right-mobile:focus {
+.icon-left-mobile:hover,
+.icon-right-mobile:focus,
+.icon-left-mobile:focus {
     color: #C12930;
 }
 
@@ -2325,7 +2346,6 @@ display: none;
     background-color: transparent;
  }
 
-
  @media screen and (min-width: 768px) {
     .button-right:hover {
         background-color: #C12930; 
@@ -2338,10 +2358,6 @@ display: none;
       background-color: transparent;
     }
 }
-
-
-
-
 
   .heating-container-cards {
 display: flex;
