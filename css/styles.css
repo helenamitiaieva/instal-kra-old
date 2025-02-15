@@ -2214,6 +2214,8 @@ cursor: pointer;
 width: 30px;
 height: 30px;
 transition: background-color 0.3s ease;
+color: #F7F9FC;
+font-size: 20px;
 }
 
 @media screen and (min-width: 768px) {
