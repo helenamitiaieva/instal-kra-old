@@ -2160,11 +2160,9 @@ transition: background-color 0.3s ease;
 }
 
  .left-icon {
-    fill: currentColor;
+    fill: #F7F9FC !important;
     width: 20px;
     height: 20px;
-    z-index: 1000;
-
 }
 
 @media screen and (min-width: 768px) {
