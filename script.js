@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const listsPriceButton = document.getElementById('listsPriceButton');
     const listsPricePopup = document.getElementById('listsPricePopup');
-    const priceButton = document.getElementById('priceButton');
-    const popup = document.getElementById('popup');
+    const priceButton = document.getElementById('priceButton'); // Кнопка "CENNIKI"
+    const popup = document.getElementById('popup'); // Попап с ценами
     const producersLink = document.getElementById('producers');
     const listsPopup = document.getElementById('listsPopup');
     const burgerMenu = document.getElementById('burgerMenu');
@@ -92,66 +92,85 @@ document.addEventListener('DOMContentLoaded', () => {
     const backToPopupFromListsPrice = document.getElementById('backToPopupFromListsPrice');
     const backToBurgerMenu = document.querySelector('.menu-price-button-back');
 
-    // Toggle burger menu
+    // ✅ Функция для закрытия всех открытых окон
+    function closeAllPopups() {
+        popup.style.display = 'none';
+        listsPricePopup.style.display = 'none';
+        listsPopup.style.display = 'none';
+    }
+
+    // ✅ Обработчик клика по бургер-меню
     burgerMenu.addEventListener('click', () => {
-        mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+        const isAnyPopupOpen =
+            popup.style.display === 'block' ||
+            listsPricePopup.style.display === 'block' ||
+            listsPopup.style.display === 'flex';
+
+        if (isAnyPopupOpen) {
+            // Если открыто какое-то окно, просто закрываем его
+            closeAllPopups();
+        } else {
+            // Если ничего не открыто, открываем бургер-меню
+            mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    });
+
+    // ✅ Обработчик клика по кнопке "CENNIKI"
+    priceButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const isPopupOpen = popup.style.display === 'block';
+        const isOtherPopupOpen =
+            listsPricePopup.style.display === 'block' ||
+            listsPopup.style.display === 'flex';
+
+        if (isOtherPopupOpen) {
+            // Закрываем другие окна перед открытием
+            closeAllPopups();
+        }
+
+        // Теперь открываем/закрываем CENNIKI (только если оно не было открыто)
+        popup.style.display = isPopupOpen ? 'none' : 'block';
     });
 
     // Toggle price popup from mobile menu
     mobilePriceButton.addEventListener('click', (event) => {
         event.preventDefault();
-        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        closeAllPopups();
+        popup.style.display = 'block';
         mobileMenu.style.display = 'none';
     });
 
     // Toggle "Cenniki do pobrania"
     listsPriceButton?.addEventListener('click', (event) => {
         event.preventDefault();
-        if (listsPricePopup) {
-            listsPricePopup.style.display = listsPricePopup.style.display === 'block' ? 'none' : 'block';
-        }
-        popup.style.display = 'none';
-        if (listsPopup) listsPopup.style.display = 'none';
-    });
-
-    // Toggle "CENNIKI"
-    priceButton.addEventListener('click', (event) => {
-        event.stopPropagation();
-        popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+        closeAllPopups();
+        listsPricePopup.style.display = 'block';
     });
 
     // Toggle "Producers"
     producersLink?.addEventListener('click', (event) => {
         event.preventDefault();
-        if (listsPopup) {
-            listsPopup.style.display = listsPopup.style.display === 'flex' ? 'none' : 'flex';
-        }
-        popup.style.display = 'none';
-        if (listsPricePopup) listsPricePopup.style.display = 'none';
+        closeAllPopups();
+        listsPopup.style.display = 'flex';
     });
 
     // Возврат из #listsPopup в #popup
     document.querySelector('.lists-price-button-back')?.addEventListener('click', () => {
-        listsPopup.style.display = 'none';
+        closeAllPopups();
         popup.style.display = 'block';
     });
 
+    backToPopupFromListsPrice?.addEventListener('click', () => {
+        closeAllPopups();
+        popup.style.display = 'block';
+    });
 
-backToPopupFromListsPrice?.addEventListener('click', () => {
-    listsPricePopup.style.display = 'none';
-    popup.style.display = 'block';
-});
+    backToBurgerMenu?.addEventListener('click', () => {
+        closeAllPopups();
+        mobileMenu.style.display = 'block';
+    });
 
-
-backToBurgerMenu?.addEventListener('click', () => {
-    popup.style.display = 'none'; // Скрываем popup (если он был открыт)
-    listsPricePopup.style.display = 'none'; // Скрываем listsPricePopup (если открыт)
-    listsPopup.style.display = 'none'; // Скрываем listsPopup (если открыт)
-    mobileMenu.style.display = 'block'; // Показываем бургер-меню
-});
-
-
-    // Close all popups when clicking outside
+    // Закрытие всех окон при клике вне меню
     document.addEventListener('click', (event) => {
         if (
             !burgerMenu.contains(event.target) &&
@@ -160,23 +179,18 @@ backToBurgerMenu?.addEventListener('click', () => {
             (!listsPricePopup || !listsPricePopup.contains(event.target)) &&
             (!listsPopup || !listsPopup.contains(event.target))
         ) {
+            closeAllPopups();
             mobileMenu.style.display = 'none';
-            if (popup) popup.style.display = 'none';
-            if (listsPricePopup) listsPricePopup.style.display = 'none';
-            if (listsPopup) listsPopup.style.display = 'none';
         }
     });
 
     function showScreen(screenId) {
-    // Скрываем все экраны
-    document.querySelectorAll('.screen').forEach(screen => {
-        screen.classList.remove('active');
-    });
+        // Скрываем все экраны
+        document.querySelectorAll('.screen').forEach(screen => {
+            screen.classList.remove('active');
+        });
 
-    // Показываем нужный экран
-    document.getElementById(screenId).classList.add('active');
-}
-
-
+        // Показываем нужный экран
+        document.getElementById(screenId).classList.add('active');
+    }
 });
-

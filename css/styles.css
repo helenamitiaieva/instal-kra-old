@@ -2165,13 +2165,13 @@ appearance: none;
 }
 
  .left-icon {
-    fill: #F7F9FC !important;
-    width: 20px;
-    height: 20px;
+display: none;
 }
 
 @media screen and (min-width: 768px) {
     .left-icon {
+        display: inline-block;
+        fill: #F7F9FC;
         width: 30px;
         height: 30px;  
     }
@@ -2291,6 +2291,12 @@ appearance: none;
     color: #F7F9FC;
     font-size: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    .icon-left-mobile {
+display: none;
+    }
+ }
 
 .icon-right-mobile {
     width: 30px;
