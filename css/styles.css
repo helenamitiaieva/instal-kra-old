@@ -2163,7 +2163,7 @@ transition: background-color 0.3s ease;
     fill: #F7F9FC;
     width: 20px;
     height: 20px;
-    z-index: 10;
+    z-index: 1000;
 
 }
 
