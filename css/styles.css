@@ -901,12 +901,10 @@ transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;; /* 
     position: absolute;
 display: flex;
 flex-direction: column;
-gap: 15px;
 border-radius: 20px;
 width: 140px;
 top: 100%;
 left: 60%;
-gap: 10px;
 background: rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(15px);
 padding: 20px;
@@ -1018,8 +1016,6 @@ margin-top: 10px;
 
 .burger-menu-link-button {
     display: flex;
-position: absolute;
-right: 20px;
  justify-content: center;
 width: 51px;
     color: #F7F9FC;
@@ -1034,9 +1030,8 @@ width: 51px;
     color: #F7F9FC;
     border-radius: 5px;
     padding: 5px;
+    margin-left: 50px;
     border: none;
-    margin-top: 15px;
-    margin-bottom: 5px;
 
 }
 
