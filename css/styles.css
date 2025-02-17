@@ -6058,84 +6058,146 @@ transition: fill-opacity 0.3s ease;
   }
 
 /* DECOR LINE */
+
+.hero-button {
+    position: relative; 
+    display: inline-block;
+}
+
+.hero-button-decor::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #F7F9FC;
+    border-radius: 50%;
+    left: 100%;
+    top: 50%;
+    margin-left: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.hero-button-decor::after {
+    position: absolute;
+    content: '';
+    width: 182px;/* Полоска тянется почти до правого края */
+    height: 2px; /* Толщина полоски */
+    background-color: #F7F9FC; /* Цвет полоски */
+    left: 100%; 
+    margin-left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.hero-button-link {
+    position: relative;
+}
+
+.hero-button-link::after {
+    position: absolute;
+    content: '';
+    width: 25px; 
+    height: 25px;
+    border: 2px solid #F7F9FC;
+border-bottom: none; 
+border-left: none;
+border-radius: 0 100% 0 0;
+    left: 335px; 
+    top: 0.5px; 
+    pointer-events: none;
+}
+
+.hero-button-link::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100px; 
+    background-color: #F7F9FC;
+    left: 358px; 
+    top: 42px;
+    pointer-events: none;
+}
+
+.partner-container-color {
+    position: relative;
+}
+
+.partner-container-color::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 580px; 
+    background-color: #C12930;
+    right: 0px; 
+    top: -20px;
+}
+
+.about-container-full {
+    position: relative;
+}
+
+.about-container-full::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 697px; 
+    background-color: #C12930; 
+    right: 20px ; 
+    top: -2px;
+}
+
+.about-container-full::after {
+    position: absolute;
+    content: '';
+    width: 25px; 
+    height: 25px;
+    border: 2px solid #C12930;
+border-top: none; 
+border-left: none;
+border-radius: 0 0 100% 0;
+    left: 160px; 
+    top: 0px; 
+    pointer-events: none;
+}
+
 @media screen and (min-width: 1920px) {
-    .hero-button {
-        position: relative; 
-        display: inline-block;
-    }
-    
+   
     .hero-button-decor::before {
-        position: absolute;
-        content: '';
         width: 15px;
         height: 15px;
-        background-color: #F7F9FC;
-        border-radius: 50%;
-        left: 100%;
-        top: 50%;
         margin-left: 30px;
-        transform: translateY(-50%);
-        pointer-events: none;
     }
 
     .hero-button-decor::after {
-        position: absolute;
-        content: '';
         width: 1220px;/* Полоска тянется почти до правого края */
         height: 3px; /* Толщина полоски */
-        background-color: #F7F9FC; /* Цвет полоски */
-        left: 100%; 
         margin-left: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-        pointer-events: none;
-    }
-
-    .hero-button-link {
-        position: relative;
     }
 
     .hero-button-link::after {
-        position: absolute;
-        content: '';
         width: 50px; 
         height: 50px;
         border: 3px solid #F7F9FC;
    border-bottom: none; 
    border-left: none;
-   border-radius: 0 100% 0 0;
         left: 1559px; 
         top: 13px; 
-        pointer-events: none;
     }
 
     .hero-button-link::before {
-        position: absolute;
-        content: '';
         width: 3px;
-        height: 100px; 
         background-color: #F7F9FC;
         left: 1606px; 
         top: 60px;
-        pointer-events: none;
-    }
-
-    .partner-container-color {
-        position: relative;
     }
 
     .partner-container-color::before {
-        position: absolute;
-        content: '';
         width: 3px;
         height: 727px; 
-        background-color: #C12930;
         right: 160px; 
         top: -99px;
-    }
-
-    .about-container-full {
-        position: relative;
     }
 
     .about-container-full::before {
