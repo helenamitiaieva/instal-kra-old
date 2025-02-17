@@ -2149,17 +2149,11 @@ appearance: none;
 display: none;
 }
 
-@media screen and (min-width: 768px) {
-    .left-icon {
-        display: inline-block;
-        fill: #F7F9FC;
-        width: 30px;
-        height: 30px;  
-    }
-}
 
 @media screen and (min-width: 1024px) {
     .left-icon { 
+        display: inline-block;
+        fill: #F7F9FC;
         width: 40px;
         height: 40px;  
     }
@@ -2177,7 +2171,7 @@ display: none;
     }
 
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .button-left:hover  {
         background-color: #C12930;
     }
@@ -2273,7 +2267,7 @@ appearance: none;
     font-size: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .icon-left-mobile {
 display: none;
     }
@@ -2295,7 +2289,7 @@ display: none;
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .icon-right-mobile {
 display: none;
     }
@@ -2306,17 +2300,10 @@ display: none;
 display: none;
 }
 
-@media screen and (min-width: 768px) {
-   .right-icon {
-    fill: #F7F9FC;
-       width: 30px;
-       height: 30px; 
-       display: inline-block; 
-   }
-}
-
 @media screen and (min-width: 1024px) {
    .right-icon { 
+    fill: #F7F9FC;
+    display: inline-block; 
        width: 40px;
        height: 40px;  
    }
@@ -2333,7 +2320,7 @@ display: none;
     background-color: transparent;
  }
 
- @media screen and (min-width: 768px) {
+ @media screen and (min-width: 1024px) {
     .button-right:hover {
         background-color: #C12930; 
     }
@@ -6069,6 +6056,143 @@ transition: fill-opacity 0.3s ease;
         width: 192px;
     }
   }
+
+/* DECOR LINE */
+@media screen and (min-width: 1920px) {
+    .hero-button {
+        position: relative; 
+        display: inline-block;
+    }
+    
+    .hero-button-decor::before {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: #F7F9FC;
+        border-radius: 50%;
+        left: 100%;
+        top: 50%;
+        margin-left: 30px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .hero-button-decor::after {
+        position: absolute;
+        content: '';
+        width: 1220px;/* Полоска тянется почти до правого края */
+        height: 3px; /* Толщина полоски */
+        background-color: #F7F9FC; /* Цвет полоски */
+        left: 100%; 
+        margin-left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .hero-button-link {
+        position: relative;
+    }
+
+    .hero-button-link::after {
+        position: absolute;
+        content: '';
+        width: 50px; 
+        height: 50px;
+        border: 3px solid #F7F9FC;
+   border-bottom: none; 
+   border-left: none;
+   border-radius: 0 100% 0 0;
+        left: 1559px; 
+        top: 13px; 
+        pointer-events: none;
+    }
+
+    .hero-button-link::before {
+        position: absolute;
+        content: '';
+        width: 3px;
+        height: 100px; 
+        background-color: #F7F9FC;
+        left: 1606px; 
+        top: 60px;
+        pointer-events: none;
+    }
+
+    .partner-container-color {
+        position: relative;
+    }
+
+    .partner-container-color::before {
+        position: absolute;
+        content: '';
+        width: 3px;
+        height: 727px; 
+        background-color: #C12930;
+        right: 160px; 
+        top: -99px;
+    }
+
+    .about-container-full {
+        position: relative;
+    }
+
+    .about-container-full::before {
+        position: absolute;
+        content: '';
+        width: 3px;/* Полоска тянется почти до правого края */
+        height: 697px; /* Толщина полоски */
+        background-color: #C12930; /* Цвет полоски */
+        right: 160px ; 
+        top: -2px;
+    }
+
+    .about-container-full::after {
+        position: absolute;
+        content: '';
+        width: 50px; 
+        height: 50px;
+        border: 3px solid #C12930;
+   border-top: none; 
+   border-left: none;
+   border-radius: 0 0 100% 0;
+        left: 160px; 
+        top: 0px; 
+        pointer-events: none;
+    }
+
+    .heating-container-full {
+        position: relative;
+    }
+
+    .heating-container-full::before {
+        position: absolute;
+        content: '';
+        width: 50px; 
+        height: 50px;
+        border: 3px solid #C12930;
+   border-top: none; 
+   border-left: none;
+   border-radius: 0 0 100% 0;
+        right: 160px; 
+        top: -100px; 
+        pointer-events: none;
+    }
+
+    .heating-container-full::after {
+        position: absolute;
+        content: '';
+        width: 1611px;
+        height: 3px; 
+        background-color: #C12930; 
+        left: 100px ; 
+        top: -53px;
+        pointer-events: none;
+    }
+    
+}
+
 
 
 
