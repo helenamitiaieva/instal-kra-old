@@ -6105,7 +6105,7 @@ border-bottom: none;
 border-left: none;
 border-radius: 0 100% 0 0;
     left: 335px; 
-    top: 0.5px; 
+    top: 18px; 
     pointer-events: none;
 }
 
@@ -6142,25 +6142,134 @@ border-radius: 0 100% 0 0;
     position: absolute;
     content: '';
     width: 2px;
-    height: 697px; 
+    height: 786px; 
     background-color: #C12930; 
-    right: 20px ; 
+    right: 0px ; 
     top: -2px;
 }
 
-.about-container-full::after {
-    position: absolute;
-    content: '';
-    width: 25px; 
-    height: 25px;
-    border: 2px solid #C12930;
-border-top: none; 
-border-left: none;
-border-radius: 0 0 100% 0;
-    left: 160px; 
-    top: 0px; 
-    pointer-events: none;
+@media screen and (min-width: 768px) {
+    .hero-button-decor::before {
+        width: 12px;
+        height: 12px;
+        margin-left: 30px;
+    }
+
+    .hero-button-link::after {
+        width: 40px; 
+        height: 40px;
+        border: 3px solid #F7F9FC;
+    border-bottom: none; 
+    border-left: none;
+        left: 630px; 
+        top: 8.5px; 
+    }
+    
+    .hero-button-decor::after {
+        width: 387px;
+        height: 3px; 
+        margin-left: 30px;
+    }
+
+    .hero-button-link::before {
+        width: 3px;
+        left: 667px; 
+        top: 46px;
+    }
+
+    .partner-container-color::before {
+        width: 3px;
+        height: 443px; 
+        right: 28px; 
+        top: -40px;
+    }
+
+    .about-container-full::before {
+        width: 3px;
+        height: 425px; 
+        right: 28px ; 
+        top: 0px;    
+    }
 }
+
+@media screen and (min-width: 1024px) {
+    .hero-button-decor::before {
+        width: 15px;
+        height: 15px;
+        margin-left: 30px;
+    }
+
+    .hero-button-link::after {
+        width: 40px; 
+        height: 40px;
+        border: 3px solid #F7F9FC;
+    border-bottom: none; 
+    border-left: none;
+        left: 855px; 
+        top: 12px; 
+    }
+
+    .hero-button-decor::after {
+        width: 570px;
+        height: 3px; 
+        margin-left: 30px;
+    }
+
+    .hero-button-link::before {
+        width: 3px;
+        left: 892px; 
+        top: 50px;
+    }
+
+    .partner-container-color::before {
+        width: 3px;
+        height: 557px; 
+        right: 29px; 
+        top: -50px;
+    }
+    
+    .about-container-full::before {
+        width: 3px;
+        height: 529px; 
+        right: 29px ; 
+        top: 0px;    
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .hero-button-link::after {
+        left: 1228px; 
+        top: 11.5px;
+    }
+
+    .hero-button-decor::after {
+        width: 890px;
+        height: 3px; 
+    }
+
+    .hero-button-link::before {
+        width: 3px;
+        left: 1265px; 
+        top: 50px;
+    }
+
+    .partner-container-color::before {
+        width: 3px;
+        height: 617px; 
+        right: 52px; 
+        top: -60px;
+    }
+    
+    .about-container-full::before {
+        width: 3px;
+        height: 620px; 
+        right: 52px ; 
+        top: 0px;    
+    }
+
+    }
 
 @media screen and (min-width: 1920px) {
    
@@ -6188,11 +6297,9 @@ border-radius: 0 0 100% 0;
 
     .hero-button-link::before {
         width: 3px;
-        background-color: #F7F9FC;
         left: 1606px; 
         top: 60px;
     }
-
     .partner-container-color::before {
         width: 3px;
         height: 727px; 
@@ -6201,13 +6308,10 @@ border-radius: 0 0 100% 0;
     }
 
     .about-container-full::before {
-        position: absolute;
-        content: '';
-        width: 3px;/* Полоска тянется почти до правого края */
-        height: 697px; /* Толщина полоски */
-        background-color: #C12930; /* Цвет полоски */
+        width: 3px;
+        height: 697px; 
         right: 160px ; 
-        top: -2px;
+        top: -2px;    
     }
 
     .about-container-full::after {
