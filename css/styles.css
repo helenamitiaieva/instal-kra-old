@@ -5174,7 +5174,27 @@ height: auto;
 
 .address {
     background-color: #F7F9FC;
+padding-bottom: 35px;
 }
+
+@media screen and (min-width: 768px) {
+    .address  {
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .address  {
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .address  {
+        padding-bottom: 60px;
+    }
+}
+
 
 .address-title {
     color: #3B3B3B;
@@ -5244,12 +5264,20 @@ padding-right: 0;
 }
 
 .address-container {
-    border-radius: 40px;
+    border-radius: 20px;
 background: rgba(229, 222, 222, 0.30);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 backdrop-filter: blur(10px);
 width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+    .address-container  {
+        border-radius: 40px; 
+    }
+}
+
+
 
 .address-text-container::before {
 position: absolute;
@@ -5258,7 +5286,7 @@ top: -20px;
 right: -25px;
 width: 187px; 
 height: 255px; 
-background-image: url('/image/address.png'); /* Посилання на SVG */
+background-image: url('/image/address.png');
 background-repeat: no-repeat;
 background-size: contain;
 z-index: -1;
@@ -6081,9 +6109,9 @@ transition: fill-opacity 0.3s ease;
 .hero-button-decor::after {
     position: absolute;
     content: '';
-    width: 167px;/* Полоска тянется почти до правого края */
-    height: 2px; /* Толщина полоски */
-    background-color: #F7F9FC; /* Цвет полоски */
+    width: 171px;
+    height: 2px; 
+    background-color: #F7F9FC; 
     left: 100%; 
     margin-left: 15px;
     top: 50%;
@@ -6098,13 +6126,13 @@ transition: fill-opacity 0.3s ease;
 .hero-button-link::after {
     position: absolute;
     content: '';
-    width: 25px; 
-    height: 25px;
+    width: 20px; 
+    height: 20px;
     border: 2px solid #F7F9FC;
 border-bottom: none; 
 border-left: none;
 border-radius: 0 100% 0 0;
-    left: 320px; 
+    left: 325px; 
     top: 18px; 
     pointer-events: none;
 }
@@ -6116,7 +6144,7 @@ border-radius: 0 100% 0 0;
     height: 100px; 
     background-color: #F7F9FC;
     left: 343px; 
-    top: 42px;
+    top: 38px;
     pointer-events: none;
 }
 
@@ -6142,11 +6170,406 @@ border-radius: 0 100% 0 0;
     position: absolute;
     content: '';
     width: 2px;
-    height: 786px; 
+    height: 783px; 
     background-color: #C12930; 
     right: 15px ; 
     top: -2px;
 }
+
+.heating-container-full {
+    position: relative;
+}
+
+.heating-container-full::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-top: none; 
+border-left: none;
+border-radius: 0 0 100% 0;
+    left: 355px; 
+    top: -23px; 
+}
+
+.heating-container-full::after {
+    position: absolute;
+    content: '';
+    width: 320px;
+    height: 2px; 
+    background-color: #C12930; 
+    left: 35px; 
+    top: -5px;
+}
+
+.heating-container-text {
+    position: relative;
+}
+
+.heating-container-text::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-bottom: none; 
+border-right: none;
+border-radius: 100% 0 0 0;
+    left: -15px; 
+    top: -5px; 
+}
+
+.heating-container-text::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 427px; 
+    background-color: #C12930; 
+    left: -15px; 
+    top: 15px;
+}
+
+.plumbing-container {
+    position: relative;
+}
+
+.plumbing-container::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-top: none; 
+border-right: none;
+border-radius: 0 0 0 100%;
+    left: 15px; 
+    top: -25px; 
+}
+
+.plumbing-container::after {
+    position: absolute;
+    content: '';
+    width: 320px;
+    height: 2px; 
+    background-color: #C12930; 
+    left: 35px; 
+    top: -7px;
+}
+
+.plumbing-container-carusel {
+    position: relative;
+}
+
+.plumbing-container-carusel::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-left: none; 
+border-bottom: none;
+border-radius: 0 100% 0 0;
+    right: -15px; 
+    top: -131px; 
+}
+
+.plumbing-container-carusel::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 433px; 
+    background-color: #C12930; 
+    right: -15px; 
+    top: -111px;
+}
+
+.bathroom-container-full {
+    position: relative;
+}
+
+.bathroom-container-full::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-left: none; 
+border-top: none;
+border-radius: 0 0 100% 0;
+    right: 15px; 
+    top: -28px; 
+}
+
+.bathroom-container-full::after {
+    position: absolute;
+    content: '';
+    width: 320px;
+    height: 2px; 
+    background-color: #C12930; 
+    left: 35px; 
+    top: -10px;
+}
+
+.bathroom-container-text {
+    position: relative;
+}
+
+.bathroom-container-text::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-right: none; 
+border-bottom: none;
+border-radius: 100% 0 0 0;
+    left: -15px; 
+    top: -10px; 
+}
+
+.bathroom-container-text::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 255px; 
+    background-color: #C12930; 
+    left: -15px; 
+    top: 10px;
+}
+
+.equipment-container-full {
+    position: relative;
+}
+
+.equipment-container-full::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-right: none; 
+border-top: none;
+border-radius: 0 0 0 100%;
+    left: 15px; 
+    top: -28px; 
+}
+
+.equipment-container-full::after {
+    position: absolute;
+    content: '';
+    width: 320px;
+    height: 2px; 
+    background-color: #C12930; 
+    left: 35px; 
+    top: -10px;
+}
+
+.equipment-container-text {
+    position: relative;
+}
+
+.equipment-container-text::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-left: none; 
+border-bottom: none;
+border-radius: 0 100% 0 0;
+    right: -15px; 
+    top: -10px; 
+}
+
+.equipment-container-text::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 276px; 
+    background-color: #C12930; 
+    right: -15px; 
+    top: 10px;
+}
+
+.company-full-container {
+    position: relative;
+}
+
+.company-full-container::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-left: none; 
+border-top: none;
+border-radius: 0 0 100% 0;
+    right: 15px; 
+    top: -28px; 
+}
+
+.company-full-container::after {
+    position: absolute;
+    content: '';
+    width: 320px;
+    height: 2px; 
+    background-color: #C12930; 
+    left: 35px; 
+    top: -10px;
+}
+
+.company-title {
+    position: relative;
+}
+
+.company-title::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-right: none; 
+border-bottom: none;
+border-radius: 100% 0 0 0;
+    left: -15px; 
+    top: -10px; 
+}
+
+.company-title::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 653px; 
+    background-color: #C12930; 
+    left: -15px; 
+    top: 10px;
+}
+
+.address-full-container {
+    position: relative;
+}
+
+.address-full-container::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-top: none; 
+border-right: none;
+border-radius: 0 0 0 100%;
+    left: 15px; 
+    top: -30px; 
+}
+
+.address-full-container::after {
+    position: absolute;
+    content: '';
+    width: 320px;
+    height: 2px; 
+    background-color: #C12930; 
+    left: 35px; 
+    top: -12px;
+}
+
+.address-title {
+    position: relative;
+}
+
+.address-title::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-bottom: none; 
+border-left: none;
+border-radius: 0 100% 0 0;
+    right: -15px; 
+    top: -12px; 
+}
+
+.address-title::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 512px; 
+    background-color: #C12930; 
+    right: -15px; 
+    top: 5px;
+}
+
+.address-list {
+    position: relative;
+}
+
+.address-list::after {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-top: none; 
+border-left: none;
+border-radius: 0 0 100% 0;
+    right: -15px; 
+    bottom: -175px; 
+}
+
+.address-list::before {
+    position: absolute;
+    content: '';
+    width: 142px;
+    height: 2px; 
+    background-color: #C12930; 
+    right: 5px; 
+    bottom: -175px;
+}
+
+.footer-logo-all {
+    position: relative;
+}
+
+.footer-logo-all::before {
+    position: absolute;
+    content: '';
+    width: 20px; 
+    height: 20px;
+    border: 2px solid #C12930;
+border-bottom: none; 
+border-right: none;
+border-radius: 100% 0 0 0;
+    right: -28px; 
+    top: -20px; 
+}
+
+.footer-logo-all::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 470px; 
+    background-color: #F7F9FC; 
+    right: -10px; 
+    top: 0px;
+}
+
+.footer-container-logo-social {
+    position: relative;
+}
+
+.footer-container-logo-social::before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #F7F9FC;
+    border-radius: 50%;
+    right: -14px;
+    bottom: -230px;
+    transform: translateY(-50%);
+}
+
 
 @media screen and (min-width: 768px) {
     .hero-button-decor::before {
@@ -6186,10 +6609,256 @@ border-radius: 0 100% 0 0;
 
     .about-container-full::before {
         width: 3px;
-        height: 425px; 
+        height: 388px; 
         right: 28px ; 
         top: 0px;    
     }
+
+    .heating-container-full::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-top: none; 
+    border-left: none;
+        left: 680px; 
+        top: -77px; 
+    }
+
+    .heating-container-full::after {
+        width: 580px;
+        height: 3px; 
+        left: 100px; 
+        top: -20px;
+    }
+
+    .heating-container-text::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-bottom: none; 
+    border-right: none;
+        left: -30px; 
+        top: -20px; 
+    }
+
+    .heating-container-text::after {
+        width: 3px;
+        height: 475px; 
+        left: -30px; 
+        top: 40px;
+    }
+
+    .plumbing-container::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-top: none; 
+    border-right: none;
+        left: 40px; 
+        top: -80px; 
+    }
+
+    .plumbing-container::after {
+        width: 570px;
+        height: 3px; 
+        left: 100px; 
+        top: -23px;
+    }
+
+    .plumbing-container-carusel::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-left: none; 
+    border-bottom: none;
+        right: -275px; 
+        top: -23px; 
+    }
+
+    .plumbing-container-carusel::after {
+        width: 3px;
+        height: 480px; 
+        right: -275px; 
+        top: 35px;
+    }
+
+    .bathroom-container-full::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-left: none; 
+    border-top: none;
+        right: 41px; 
+        top: -80px; 
+    }
+
+    .bathroom-container-full::after {
+        width: 567px;
+        height: 3px; 
+        left: 100px; 
+        top: -23px;
+    }
+
+    .bathroom-container-text::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-right: none; 
+    border-bottom: none;
+        left: -30px; 
+        top: -23px; 
+    }
+
+    .bathroom-container-text::after {
+        width: 3px;
+        height: 218px; 
+        left: -30px; 
+        top: 37px;
+    }
+
+    .equipment-container-full::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-right: none; 
+    border-top: none;
+        left: 40px; 
+        top: -77px; 
+    }
+
+    .equipment-container-full::after {
+        width: 568px;
+        height: 3px; 
+        left: 100px; 
+        top: -20px;
+    }
+    
+    .equipment-container-text::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-left: none; 
+    border-bottom: none;
+        right: -30px; 
+        top: -20px; 
+    }
+
+    .equipment-container-text::after {
+        width: 3px;
+        height: 215px; 
+        right: -30px; 
+        top: 40px;
+    }
+
+    .company-full-container::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-left: none; 
+    border-top: none;
+        right: 40px; 
+        top: -75px; 
+    }
+
+    .company-full-container::after {
+        width: 568px;
+        height: 3px; 
+        left: 100px; 
+        top: -18px;
+    }
+
+    .company-title::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-right: none; 
+    border-bottom: none;
+        left: -30px; 
+        top: -18px; 
+    }
+
+    .company-title::after {
+        width: 3px;
+        height: 540px; 
+        left: -30px; 
+        top: 40px;
+    }
+
+    .address-full-container::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-top: none; 
+    border-right: none;
+        left: 40px; 
+        top: -80px; 
+    }
+
+    .address-full-container::after {
+        width: 564px;
+        height: 3px; 
+        left: 99px; 
+        top: -23px;
+    }
+
+    .address-title::before {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-bottom: none; 
+    border-left: none;
+        right: -25px; 
+        top: -23px; 
+    }
+
+    .address-title::after {
+        width: 3px;
+        height: 342px; 
+        right: -25px; 
+        top: 35px;
+    }
+    
+    .address-list::after {
+        width: 60px; 
+        height: 60px;
+        border: 3px solid #C12930;
+    border-top: none; 
+    border-left: none;
+        right: -351px; 
+        top: 263px; 
+    }
+
+    .address-list::before {
+        width: 339px;
+        height: 3px; 
+        right: -291px; 
+        bottom: -23px;
+    }
+
+    .footer-logo-all::before {
+        width: 20px; 
+        height: 20px;
+        border: 3px solid #C12930;
+    border-bottom: none; 
+    border-right: none;
+        right: -17px; 
+        top: -20px; 
+    }
+
+    .footer-logo-all::after {
+        width: 3px;
+        height: 390px; 
+        right: 0px; 
+        top: 0px;
+    }
+
+    .footer-container-logo-social::before {
+        width: 17px;
+        height: 17px;
+        right: -7px;
+        bottom: -140px;
+    }
+    
 }
 
 @media screen and (min-width: 1024px) {
@@ -6202,7 +6871,6 @@ border-radius: 0 100% 0 0;
     .hero-button-link::after {
         width: 40px; 
         height: 40px;
-        border: 3px solid #F7F9FC;
     border-bottom: none; 
     border-left: none;
         left: 855px; 
@@ -6211,28 +6879,196 @@ border-radius: 0 100% 0 0;
 
     .hero-button-decor::after {
         width: 570px;
-        height: 3px; 
         margin-left: 30px;
     }
 
     .hero-button-link::before {
-        width: 3px;
         left: 892px; 
         top: 50px;
     }
 
     .partner-container-color::before {
-        width: 3px;
         height: 557px; 
         right: 29px; 
         top: -50px;
     }
     
     .about-container-full::before {
-        width: 3px;
-        height: 529px; 
+        height: 502px; 
         right: 29px ; 
         top: 0px;    
+    }
+
+    .heating-container-full::before {
+    border-top: none; 
+    border-left: none;
+        left: 935px; 
+        top: -77px; 
+    }
+
+    .heating-container-full::after {
+        width: 810px;
+        left: 130px; 
+        top: -20px;
+    }
+    .heating-container-text::before {
+        left: -30px; 
+        top: -20px; 
+    }
+
+    .heating-container-text::after {
+        width: 3px;
+        height: 590px; 
+        left: -30px; 
+        top: 40px;
+    }
+
+    .plumbing-container::before {
+        left: 70px; 
+        top: -80px; 
+    }
+
+    .plumbing-container::after {
+        width: 764px;
+        left: 130px; 
+        top: -23px;
+    }
+
+    .plumbing-container-carusel::before {
+        right: -420px; 
+        top: -23px; 
+    }
+
+    .plumbing-container-carusel::after {
+        height: 600px; 
+        right: -420px; 
+        top: 35px;
+    }
+
+    .bathroom-container-full::before {
+        right: 70px; 
+        top: -80px; 
+    }
+
+    .bathroom-container-full::after {
+        width: 764px;
+        height: 3px; 
+        left: 130px; 
+        top: -23px;
+    }
+
+    .bathroom-container-text::before {
+        left: -30px; 
+        top: -23px; 
+    }
+
+    .bathroom-container-text::after {
+        height: 282px; 
+        left: -30px; 
+        top: 37px;
+    }
+
+    .equipment-container-full::before {
+        left: 70px; 
+        top: -77px; 
+    }
+
+    .equipment-container-full::after {
+        width: 765px;
+        left: 130px; 
+        top: -20px;
+    }
+    
+    .equipment-container-text::before {
+        right: -20px; 
+        top: -20px; 
+    }
+
+    .equipment-container-text::after {
+        width: 3px;
+        height: 281px; 
+        right: -20px; 
+        top: 40px;
+    }
+
+    .company-full-container::before {
+        right: 70px; 
+        top: -75px; 
+    }
+
+    .company-full-container::after {
+        width: 764px;
+        height: 3px; 
+        left: 130px; 
+        top: -18px;
+    }
+
+    .company-title::before {
+        left: -30px; 
+        top: -18px; 
+    }
+
+    .company-title::after {
+        width: 3px;
+        height: 564px; 
+        left: -30px; 
+        top: 40px;
+    }
+
+    .address-full-container::before {
+        left: 70px; 
+        top: -80px; 
+    }
+
+    .address-full-container::after {
+        width: 764px;
+        height: 3px; 
+        left: 130px; 
+        top: -23px;
+    }
+
+    .address-title::before {
+        right: -30px; 
+        top: -23px; 
+    }
+
+    .address-title::after {
+        height: 310px; 
+        right: -30px; 
+        top: 35px;
+    }
+    
+    .address-list::after {
+        right: -449.5px; 
+        top: 205px; 
+    }
+
+    .address-list::before {
+        width: 446px;
+        height: 3px; 
+        right: -390px; 
+        bottom: -23px;
+    }
+
+    .footer-logo-all::before {
+        width: 30px; 
+        height: 30px;
+        right: -37px; 
+        top: -30px; 
+    }
+
+    .footer-logo-all::after {
+        width: 3px;
+        height: 460px; 
+        right: -10px; 
+        top: 0px;
+    }
+
+    .footer-container-logo-social::before {
+        width: 15px;
+        height: 15px;
+        right: -16px;
+        bottom: -165px;
     }
 }
 
@@ -6264,9 +7100,173 @@ border-radius: 0 100% 0 0;
     
     .about-container-full::before {
         width: 3px;
-        height: 620px; 
+        height: 595px; 
         right: 52px ; 
         top: 0px;    
+    }
+    .heating-container-full::before {
+        left: 1328px; 
+        top: -85px; 
+    }
+
+    .heating-container-full::after {
+        width: 1210px;
+        left: 120px; 
+        top: -28px;
+    }
+    .heating-container-text::before {
+        left: -60px; 
+        top: -28px; 
+    }
+
+    .heating-container-text::after {
+        width: 3px;
+        height: 605px; 
+        left: -60px; 
+        top: 32px;
+    }
+
+    .plumbing-container::before {
+        left: 60px; 
+        top: -90px; 
+    }
+
+    .plumbing-container::after {
+        width: 1210px;
+        left: 120px; 
+        top: -33px;
+    }
+
+    .plumbing-container-carusel::before {
+        right: -500px; 
+        top: -33px; 
+    }
+
+    .plumbing-container-carusel::after {
+        height: 621px; 
+        right: -500px; 
+        top: 27px;
+    }
+
+    .bathroom-container-full::before {
+        right: 52px; 
+        top: -87px; 
+    }
+
+    .bathroom-container-full::after {
+        width: 1210px;
+        left: 120px; 
+        top: -30px;
+    }
+
+    .bathroom-container-text::before {
+        left: -60px; 
+        top: -30px; 
+    }
+
+    .bathroom-container-text::after {
+        height: 301px; 
+        left: -60px; 
+        top: 30px;
+    }
+
+    .equipment-container-full::before {
+        left: 60px; 
+        top: -85px; 
+    }
+
+    .equipment-container-full::after {
+        width: 1210px;
+        left: 120px; 
+        top: -28px;
+    }
+    
+    .equipment-container-text::before {
+        right: -46px; 
+        top: -28px; 
+    }
+
+    .equipment-container-text::after {
+        height: 301px; 
+        right: -46px; 
+        top: 30px;
+    }
+
+    .company-full-container::before {
+        right: 50px; 
+        top: -85px; 
+    }
+
+    .company-full-container::after {
+        width: 1210px;
+        left: 120px; 
+        top: -28px;
+    }
+
+    .company-title::before {
+        left: -60px; 
+        top: -28px; 
+    }
+
+    .company-title::after {
+        height: 347px; 
+        left: -60px; 
+        top: 32px;
+    }
+
+    .address-full-container::before {
+        left: 60px; 
+        top: -87px; 
+    }
+
+    .address-full-container::after {
+        width: 1210px;
+        left: 120px; 
+        top: -30px;
+    }
+
+    .address-title::before {
+        right: -70px; 
+        top: -30px; 
+    }
+
+    .address-title::after {
+        height: 344px; 
+        right: -70px; 
+        top: 30px;
+    }
+    
+    .address-list::after {
+        right: -677.5px; 
+        top: 201px; 
+    }
+
+    .address-list::before {
+        width: 619px;
+        height: 3px; 
+        right: -618px; 
+        bottom: -33px;
+    }
+
+    .footer-logo-all::before {
+        width: 30px; 
+        height: 30px;
+        right: -22px; 
+        top: -30px; 
+    }
+
+    .footer-logo-all::after {
+        width: 3px;
+        height: 460px; 
+        right: 5px; 
+        top: 0px;
+    }
+
+    .footer-container-logo-social::before {
+        width: 20px;
+        height: 20px;
+        right: -3px;
+        bottom: -50px;
     }
 
     }
