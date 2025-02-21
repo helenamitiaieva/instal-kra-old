@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (screenWidth <= 767) return 225;
         if (screenWidth >= 768 && screenWidth < 1023) return 315;
         if (screenWidth >= 1024 && screenWidth < 1439) return 365;
-        if (screenWidth >= 1440 && screenWidth < 1919) return 749;
+        if (screenWidth >= 1440 && screenWidth < 1919) return 730;
         return 820; 
     };
 
