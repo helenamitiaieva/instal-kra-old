@@ -88,89 +88,77 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerMenu = document.getElementById('burgerMenu');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobilePriceButton = document.getElementById('mobilePriceButton');
-    const backToPopup = document.getElementById('backToPopup');
     const backToPopupFromListsPrice = document.getElementById('backToPopupFromListsPrice');
     const backToBurgerMenu = document.querySelector('.menu-price-button-back');
 
-    // ✅ Функция для закрытия всех открытых окон
+    // ✅ Функция для закрытия всех окон, включая бургер-меню
     function closeAllPopups() {
         popup.style.display = 'none';
         listsPricePopup.style.display = 'none';
         listsPopup.style.display = 'none';
+        mobileMenu.style.display = 'none'; // Закрываем бургер-меню
+        burgerMenu.classList.remove("active"); // Возвращаем полоски
     }
 
     // ✅ Обработчик клика по бургер-меню
     burgerMenu.addEventListener('click', () => {
-        const isAnyPopupOpen =
-            popup.style.display === 'block' ||
-            listsPricePopup.style.display === 'block' ||
-            listsPopup.style.display === 'flex';
-
-        if (isAnyPopupOpen) {
-            // Если открыто какое-то окно, просто закрываем его
-            closeAllPopups();
+        if (burgerMenu.classList.contains("active")) {
+            closeAllPopups(); // Если бургер-меню уже открыто, закрываем его
         } else {
-            // Если ничего не открыто, открываем бургер-меню
-            mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+            toggleMenu(); // Открываем бургер-меню
+            mobileMenu.style.display = 'flex';
         }
     });
 
     // ✅ Обработчик клика по кнопке "CENNIKI"
     priceButton.addEventListener('click', (event) => {
         event.stopPropagation();
-        const isPopupOpen = popup.style.display === 'block';
-        const isOtherPopupOpen =
-            listsPricePopup.style.display === 'block' ||
-            listsPopup.style.display === 'flex';
-
-        if (isOtherPopupOpen) {
-            // Закрываем другие окна перед открытием
-            closeAllPopups();
-        }
-
-        // Теперь открываем/закрываем CENNIKI (только если оно не было открыто)
-        popup.style.display = isPopupOpen ? 'none' : 'block';
+        popup.style.display = 'block';
+        burgerMenu.classList.add("active"); // ✅ Держим крестик активным
     });
 
-    // Toggle price popup from mobile menu
+    // ✅ Toggle price popup from mobile menu
     mobilePriceButton.addEventListener('click', (event) => {
         event.preventDefault();
-        closeAllPopups();
         popup.style.display = 'block';
         mobileMenu.style.display = 'none';
+        burgerMenu.classList.add("active"); // ✅ Держим крестик активным
     });
 
-    // Toggle "Cenniki do pobrania"
+    // ✅ Toggle "Cenniki do pobrania"
     listsPriceButton?.addEventListener('click', (event) => {
         event.preventDefault();
-        closeAllPopups();
         listsPricePopup.style.display = 'block';
+        burgerMenu.classList.add("active"); // ✅ Крестик остаётся
     });
 
-    // Toggle "Producers"
+    // ✅ Toggle "Producers"
     producersLink?.addEventListener('click', (event) => {
         event.preventDefault();
-        closeAllPopups();
         listsPopup.style.display = 'flex';
+        burgerMenu.classList.add("active"); // ✅ Крестик остаётся
     });
 
-    // Возврат из #listsPopup в #popup
+    // ✅ Возврат из #listsPopup в #popup
     document.querySelector('.lists-price-button-back')?.addEventListener('click', () => {
-        closeAllPopups();
+        listsPopup.style.display = 'none';
         popup.style.display = 'block';
+        burgerMenu.classList.add("active"); // ✅ Крестик остаётся
     });
 
     backToPopupFromListsPrice?.addEventListener('click', () => {
-        closeAllPopups();
+        listsPricePopup.style.display = 'none';
         popup.style.display = 'block';
+        burgerMenu.classList.add("active"); // ✅ Крестик остаётся
     });
 
     backToBurgerMenu?.addEventListener('click', () => {
-        closeAllPopups();
+        popup.style.display = 'none';
         mobileMenu.style.display = 'block';
+        burgerMenu.classList.add("active"); // ✅ Крестик остаётся
     });
 
-    // Закрытие всех окон при клике вне меню
+    // ✅ Закрытие всех окон при клике вне меню
     document.addEventListener('click', (event) => {
         if (
             !burgerMenu.contains(event.target) &&
@@ -180,17 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
             (!listsPopup || !listsPopup.contains(event.target))
         ) {
             closeAllPopups();
-            mobileMenu.style.display = 'none';
         }
     });
 
-    function showScreen(screenId) {
-        // Скрываем все экраны
-        document.querySelectorAll('.screen').forEach(screen => {
-            screen.classList.remove('active');
-        });
-
-        // Показываем нужный экран
-        document.getElementById(screenId).classList.add('active');
+    // ✅ Функция для переключения крестика и полосок
+    function toggleMenu() {
+        burgerMenu.classList.toggle("active");
     }
 });

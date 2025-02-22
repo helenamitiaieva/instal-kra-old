@@ -870,7 +870,12 @@ transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;; /* 
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    padding-top: 15px;
+   top: 10px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+            align-items: center;
+            position: relative;
 }
 
 .menu-mobile div {
@@ -879,7 +884,28 @@ transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;; /* 
     height: 2px;
     background-color: white;
     margin: 2px 0;
-    transition: background-color 0.3s ease; /* Плавное изменение цвета */
+    transition: all 0.3s ease;
+            position: absolute;
+}
+
+.menu-mobile div:nth-child(1) {
+    top: 0;
+}
+.menu-mobile div:nth-child(2) {
+    top: 10px;
+}
+.menu-mobile div:nth-child(3) {
+    top: 20px;
+}
+
+.menu-mobile.active div:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.menu-mobile.active div:nth-child(2) {
+    opacity: 0;
+}
+.menu-mobile.active div:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
 }
 
 .menu-mobile:hover div {
