@@ -1954,6 +1954,10 @@ padding-right: 0;
     }
 }
 
+.about-text-mobile {
+    min-height: 209px;
+}
+
 .about-text-bold {
     font-size: 14px;
 font-weight: 700;
@@ -6229,7 +6233,7 @@ border-radius: 0 100% 0 0;
     position: absolute;
     content: '';
     width: 2px;
-    height: 580px; 
+    height: 600px; 
     background-color: #C12930;
     right: 15px; 
     top: -20px;
