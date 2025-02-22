@@ -130,14 +130,12 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
-    background-color: 4; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%; 
     z-index: 1000; 
     background: rgba(0, 0, 0, 0.5);
-    
     box-shadow: 0px 6px 30px -9px rgba(0,0,0,0.1);
     justify-content: center;
     align-items: center;
@@ -147,7 +145,8 @@ body {
     .header-container {
         gap: 10px; 
         padding-top: 10px;
-    }
+        padding-bottom: 10px;
+        }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -169,7 +168,9 @@ body {
 
 @media screen and (min-width: 1920px) {
     .header-container {
-        gap: 200px; 
+        gap: 20px; 
+        padding-left: 2%;
+        padding-right: 2%;
     }
 }
 
@@ -915,7 +916,6 @@ transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease;; /* 
     }
 }
 
-
 .nav {
     position: relative;
 }
@@ -932,7 +932,7 @@ background: rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(15px);
 padding: 20px;
 display: none;
-padding-bottom: 35px;
+padding-bottom: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1067,8 +1067,8 @@ color: #1EAF8A;
 
 .button-change-language-mobile {
     position: absolute;
-    right: 10px;
-    bottom:12px;
+    right: 0px;
+    bottom: 20px;
     border: none;
     background-color: transparent;
     width: 70px;
@@ -1076,11 +1076,14 @@ color: #1EAF8A;
     color: #F7F9FC;
     font-size: 15px;
     cursor: pointer;
+    margin-right: 20px;
+    padding-top: 5px;
+
 
 }
 
 @media screen and (min-width: 768px) {
-    .button-change-language  {
+    .button-change-language-mobile  {
         display: none;
     }
 }
@@ -1103,6 +1106,33 @@ color: #1EAF8A;
         cursor: pointer;
         transition: all 0.3s ease;
         border-radius: 10px;
+
+    }
+}
+
+.lang-list {
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+}
+
+.item-lang {
+    font-size: 10px;
+    color: #F7F9FC;
+    font-family: "Work Sans";
+    font-size: 10px;
+    font-style: normal;
+}
+
+.image-icon-lang {
+    width: 15px;
+    gap: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .image-icon-lang {
+        width: 20px;
+        gap: 20px;
     }
 }
 
@@ -2208,7 +2238,7 @@ appearance: none;
 
 @media screen and (min-width: 1920px) {
     .heating-button-left  {
-        left: 55px;  
+        left: 0px;  
     }
 }
 
@@ -2322,7 +2352,7 @@ appearance: none;
 
 @media screen and (min-width: 1920px) {
     .heating-button-right  {
-        right: 55px;  
+        right: 0px;  
     }
 }
 
@@ -2940,7 +2970,7 @@ text-transform: uppercase;
 
   @media screen and (min-width: 1920px) {
     .heating-card-title  {
-        font-size: 36px;
+        font-size: 34px;
         line-height: 1.39;
     }
   }
@@ -3067,7 +3097,7 @@ text-transform: uppercase;
 
 @media screen and (min-width: 1920px) {
     .plumbing-button-left  {
-        left: 55px;  
+        left: 0px;  
     }
 }
 
@@ -3099,7 +3129,7 @@ text-transform: uppercase;
 
 @media screen and (min-width: 1920px) {
     .plumbing-button-right  {
-        right: 55px;  
+        right: 0px;  
     }
 }
 
@@ -3614,7 +3644,7 @@ text-transform: uppercase;
 
   @media screen and (min-width: 1920px) {
     .plumbing-card-title  {
-        font-size: 36px;
+        font-size: 35px;
         line-height: 1.39; 
     }
   }
@@ -3905,6 +3935,7 @@ justify-content: start;
 
 @media screen and (min-width: 1920px) {
     .bathroom-title  {
+        width: 420px;
         margin-bottom: 30px;
     }
 }
@@ -3975,7 +4006,7 @@ justify-content: start;
 
 @media screen and (min-width: 1920px) {
     .bathroom-button-left  {
-        left: 55px;  
+        left: 0px;  
     }
 }
 
@@ -3998,7 +4029,7 @@ justify-content: start;
 
 @media screen and (min-width: 1920px) {
     .bathroom-button-right  {
-        right: 55px;  
+        right: 0px;  
     }
 }
 
@@ -4099,6 +4130,13 @@ box-shadow: 0px 0px 60px 0px rgba(2, 4, 69, 0.06);
 @media screen and (min-width: 1440px) {
     .bathroom-card {
         width: 350px;
+        height: 296px;
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    .bathroom-card {
+        width: 380px;
         height: 296px;
     }
   }
@@ -4361,9 +4399,9 @@ width: 100%;
     }
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1920px) {
     .bathroom-card-title  {
-        font-size: 36px;
+        font-size: 35px;
         line-height: 1.39; 
     }
   }
@@ -4536,7 +4574,7 @@ width: 100%;
 
 @media screen and (min-width: 1920px) {
     .equipment-button-left  {
-        margin-left: 100px; 
+left: 45px; 
     }
 }
 
@@ -4564,7 +4602,7 @@ width: 100%;
 
 @media screen and (min-width: 1920px) {
     .equipment-button-right  {
-        right: 0px;  
+        right: -45px;  
     }
 }
 
@@ -5269,6 +5307,12 @@ padding-bottom: 35px;
 @media screen and (min-width: 1440px) {
     .address  {
         padding-bottom: 60px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .address  {
+        padding-bottom: 100px;
     }
 }
 
@@ -7391,50 +7435,173 @@ border-radius: 100% 0 0 0;
         top: -2px;    
     }
 
-    .about-container-full::after {
-        position: absolute;
-        content: '';
-        width: 50px; 
-        height: 50px;
-        border: 3px solid #C12930;
-   border-top: none; 
-   border-left: none;
-   border-radius: 0 0 100% 0;
-        left: 160px; 
-        top: 0px; 
-        pointer-events: none;
-    }
-
-    .heating-container-full {
-        position: relative;
-    }
 
     .heating-container-full::before {
-        position: absolute;
-        content: '';
         width: 50px; 
         height: 50px;
-        border: 3px solid #C12930;
-   border-top: none; 
-   border-left: none;
-   border-radius: 0 0 100% 0;
-        right: 160px; 
+        left: 1710px; 
         top: -100px; 
-        pointer-events: none;
     }
 
     .heating-container-full::after {
-        position: absolute;
-        content: '';
-        width: 1611px;
-        height: 3px; 
-        background-color: #C12930; 
-        left: 100px ; 
+        width: 1490px;
+        left: 220px; 
         top: -53px;
-        pointer-events: none;
     }
     
+    .heating-container-text::before {
+        left: 10px; 
+        top: -53px; 
+    }
+
+    .heating-container-text::after {
+        height: 710px;
+        left: 10px;
+        top: 7px;
+    }
+
+    .plumbing-container::before {
+        left: 160px;
+        top: -107px;
+    }
+
+    .plumbing-container::after {
+        width: 1490px;
+        left: 210px;
+        top: -50px;
+    }
+    
+    .plumbing-container-carusel::before {
+        right: -590px;
+        top: -50px;
+    }
+
+    .plumbing-container-carusel::after {
+        height: 710px;
+        right: -590px;
+        top: 9px;
+    }
+
+    .bathroom-container-full::before {
+        right: 166px;
+        top: -107px;
+    }
+    .bathroom-container-full::after {
+        width: 1476px;
+        left: 220px;
+        top: -50px;
+    }
+
+    .bathroom-container-text::before {
+        left: 10px;
+        top: -50px;
+    }
+
+    .bathroom-container-text::after {
+        height: 380px;
+        left: 10px;
+        top: 10px;
+    }
+
+    .equipment-container-full::before {
+        left: 160px;
+        top: -107px;
+    }
+    .equipment-container-full::after {
+        width: 1490px;
+        left: 219px;
+        top: -50px;
+    }
+
+    .equipment-container-text::before {
+        right: 10px;
+        top: -50px;
+    }
+
+    .equipment-container-text::after {
+        height: 382px;
+        right: 10px;
+        top: 10px;
+    }
+
+    .company-full-container::before {
+        right: 154px;
+        top: -107px;
+    }
+
+    .company-full-container::after {
+        width: 1490px;
+        left: 220px;
+        top: -50px;
+    }
+
+    .company-title::before {
+        left: 10px;
+        top: -50px;
+    }
+    .company-title::after {
+        height: 440px;
+        left: 10px;
+        top: 10px;
+    }
+
+    .address-full-container::before {
+        left: 160px;
+        top: -107px;
+    }
+
+    .address-full-container::after {
+        width: 1480px;
+        left: 220px;
+        top: -50px;
+    }
+
+    .address-title::before {
+        right: 10px;
+        top: -50px;
+    }
+        
+    .address-title::after {
+            height: 384px;
+            right: 10px;
+            top: 10px;
+        }
+
+    .address-list::after {
+        right: -820px;
+        top: 213px;
+    }
+
+    .address-list::before {
+        width: 741px;
+        height: 3px;
+        right: -761px;
+        bottom: -53px;
+    }
+
+    .footer-logo-all::before {
+        width: 50px;
+        height: 50px;
+        right: -127px;
+        top: -50px;
+    }
+
+    .footer-logo-all::after {
+        width: 3px;
+        height: 640px;
+        right: -80px;
+        top: 0px;
+    }
+
+    .footer-container-logo-social::before {
+        width: 20px;
+        height: 20px;
+        right: -88px;
+        bottom: -120px;
+    }
 }
+
+
 
 
 
