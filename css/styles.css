@@ -5398,15 +5398,13 @@ width: 100%;
     }
 }
 
-
-
 .address-text-container::before {
 position: absolute;
 content: '';
-top: -20px;
+top: -40px;
 right: -25px;
-width: 187px; 
-height: 255px; 
+width: 100px; 
+height: 250px; 
 background-image: url('/image/address.png');
 background-repeat: no-repeat;
 background-size: contain;
