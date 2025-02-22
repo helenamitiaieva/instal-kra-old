@@ -176,3 +176,24 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerMenu.classList.toggle("active");
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const translateButton = document.getElementById("translateButton");
+    const translateButtonMobile = document.getElementById("translateButtonMobile");
+    let currentLanguage = "pl"; // Начальный язык: польский
+
+    function translatePage() {
+        document.querySelectorAll("h1, h2, h3, p, a, button, span").forEach(element => {
+            let text = element.innerHTML.trim(); // Берём HTML-контент
+
+            if (translations[currentLanguage][text]) {
+                element.innerHTML = translations[currentLanguage][text]; // Полностью заменяем текст
+            }
+        });
+
+        currentLanguage = currentLanguage === "pl" ? "ua" : "pl"; // Переключаем язык
+    }
+
+    translateButton.addEventListener("click", translatePage);
+    translateButtonMobile.addEventListener("click", translatePage);
+});

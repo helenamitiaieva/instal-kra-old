@@ -23,6 +23,7 @@
 </head>
 <body>
     <script src="script.js"></script>
+    <script src="lang.js"></script>
     <!-- HEADER -->
     <header>
         <div class="header-container">
@@ -80,7 +81,7 @@
                         <li class="burger-menu-item"><a href="#bathroom" class="burger-menu-link">Łazienki</a></li>
                         <li class="burger-menu-item"><a href="#equipment" class="burger-menu-link">Osprzęt</a></li>
                         <li class="burger-menu-item"><a href="#company" class="burger-menu-link burger-menu-link-company">o Firmie</a></li>
-                        <li class="burger-menu-item"><button id="mobilePriceButton" class="burger-menu-link-button">cenniki</button></li>
+                        <li class="burger-menu-item"><button id="mobilePriceButton" class="burger-menu-link-button">CENNIKI</button></li>
                     </ul>
                     <div class="burger-menu-logo-mobile">
                         <svg class="burger-addess-icon">
@@ -91,6 +92,7 @@
                             +48 883 627 527
                         </a>
                     </div>
+                    <button class="button-change-language-mobile" id="translateButtonMobile">🇵🇱/🇺🇦</button>
                 </div>
                 <!-- PRICE -->
                 <div class="menu-price-contaianer" id="popup">
@@ -225,7 +227,7 @@
                         <li class="item-lists-price"><a href="https://www.wolf.eu/pl-pl/dla-profesjonalistow/pobierz/technika-grzewcza#toc2" target="_blank" class="lists-price-link">Wolf</a></li>
                     </ul>
                 </div>
-                <!-- PRICE LISTS -->
+                <!-- PRICE LISTS PDF-->
                 <div class="lists-price-contaianer-do"  id="listsPricePopup">
                     <div class="lists-price-container-back">
                         <button onclick="showScreen('popup')" id="backToPopupFromListsPrice" class="lists-price-button-back">
@@ -349,6 +351,7 @@
                     </a>
                 </div>
             </address>
+            <button class="button-change-language" id="translateButton">🇵🇱/🇺🇦</button>
         </div>
     </header>
     <main>
@@ -384,7 +387,7 @@
             <div class="partner-container-color container">
                 <div class="partner-container">
                     <h3 class="partner-title partners">
-                        Rozwój technologii informacyjnych i komunikacyjnych u naszych partnerów, firmy<br> INSTAL-KA SP. Z O.O. SP. K.
+                        Rozwój technologii informacyjnych i komunikacyjnych u naszych partnerów, firmy INSTAL-KA SP. Z O.O. SP. K.
                     </h3>
                     <ul class="partner-list">
                         <li class="partner-item">
@@ -435,9 +438,7 @@
                 </div>
                 <div class="partner-container">
                     <h3 class="partner-title loyality-program">
-                        uczestniczymy w programie 
-                        lojalnościowym naszego partnera 
-                        firmy INSTAL-KA Sp. z o.o. GRUPA SBS Sp.k.
+                        uczestniczymy w programie lojalnościowym naszego partnera firmy INSTAL-KA Sp. z o.o. GRUPA SBS Sp.k.
                     </h3>
                     <ul class="partner-list-img">
                         <li class="partner-item-img">

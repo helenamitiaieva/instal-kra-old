@@ -145,7 +145,7 @@ body {
 
 @media screen and (min-width: 768px) {
     .header-container {
-        gap: 70px; 
+        gap: 10px; 
         padding-top: 10px;
     }
 }
@@ -157,10 +157,11 @@ body {
     }
   }
 
-@media (min-width: 1024px) and (max-width: 1039px) {
+@media (min-width: 1024px) and (max-width: 1919px) {
     .header-container {
-        gap: 50px; 
+        gap: 10px; 
         padding-left: 2%;
+        padding-right: 2%;
         padding-top: 15px;
     }
   }
@@ -185,7 +186,7 @@ body {
 
 @media screen and (min-width: 1440px) {
     .nav {
-        gap: 50px; 
+        gap: 10px; 
     }
 }
 
@@ -244,7 +245,7 @@ display: none;
     .menu {
         flex-wrap: wrap;
         width: 400px;
-        gap: 15px; 
+        gap: 5px; 
         padding-top: 7px;
         padding-bottom: 7px;
     }
@@ -252,17 +253,13 @@ display: none;
 
 @media screen and (min-width: 1440px) {
     .menu {
-        gap: 20px;  
-        /* padding-top: 32px;
-        padding-bottom: 32px; */
+        gap: 15px;  
     }
   }
 
 @media screen and (min-width: 1920px) {
     .menu {
         gap: 40px; 
-        /* padding-top: 40px;
-        padding-bottom: 40px;  */
     }
 }
 
@@ -358,7 +355,7 @@ letter-spacing: 0.05em;
 
 @media screen and (min-width: 1024px) {
     .header-container-address { 
-        gap: 10px; 
+        gap: 15px; 
     }
 }
 
@@ -935,6 +932,7 @@ background: rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(15px);
 padding: 20px;
 display: none;
+padding-bottom: 35px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1067,6 +1065,47 @@ background-color: transparent;
 color: #1EAF8A;
 }
 
+.button-change-language-mobile {
+    position: absolute;
+    right: 10px;
+    bottom:12px;
+    border: none;
+    background-color: transparent;
+    width: 70px;
+    height: 20px;
+    color: #F7F9FC;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+@media screen and (min-width: 768px) {
+    .button-change-language  {
+        display: none;
+    }
+}
+
+
+.button-change-language {
+ display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .button-change-language  {
+        display: flex;
+        border: none;
+        background-color: transparent;
+        color: #F7F9FC;
+        width: 70px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 10px;
+    }
+}
+
 .hero {
     background-image: url(../image/hero-390-1x.jpg);
     background-repeat: no-repeat;
@@ -1145,8 +1184,6 @@ color: #1EAF8A;
               }
             }
 
-.hero-container {
-}
 
 @media (min-width: 768px) and (max-width: 1023px) {  
     .hero-container { 
@@ -2981,7 +3018,7 @@ text-transform: uppercase;
 
 @media screen and (min-width: 1440px) {
     .plumbing-container  {
-        gap: 30px;
+        gap: 42px;
     }
   }
 
@@ -3687,7 +3724,7 @@ margin-bottom: 15px;
 
 @media screen and (min-width: 1440px) {
     .plumbing-title  {
-        
+        width: 250px;
         font-size: 50px;
         line-height: 1.32;
     }
@@ -3891,6 +3928,7 @@ justify-content: start;
 @media screen and (min-width: 1440px) {
     .bathroom-text  {
         width: 290px; 
+        height: 100px;
         line-height: 1.25; 
     }
   }
@@ -4948,7 +4986,7 @@ margin-bottom: 15px;
 
 @media screen and (min-width: 1440px) {
     .equipment-title  {
-        
+        width: 350px;
         font-size: 50px;
         line-height: 1.32;
     }
@@ -5167,12 +5205,15 @@ height: auto;
     color:  #3B3B3B;
     line-height: 1.2;
     font-size: 16px;
+    min-height: 69px;
+    height: 69px;
 }
 
 @media screen and (min-width: 768px) {
     .company-text {
         width: 265px; 
         line-height: 1.53;  
+        min-height: auto;
     }
 }
 
@@ -5182,6 +5223,12 @@ height: auto;
         line-height: 1.15;  
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1439px) {  
+     .company-text { 
+        height: 70px;
+    } 
+    }
 
 @media screen and (min-width: 1440px) {
     .company-text  {
@@ -6628,7 +6675,7 @@ border-radius: 100% 0 0 0;
 
     .partner-container-color::before {
         width: 3px;
-        height: 443px; 
+        height: 450px; 
         right: 28px; 
         top: -40px;
     }
@@ -6805,7 +6852,7 @@ border-radius: 100% 0 0 0;
 
     .company-title::after {
         width: 3px;
-        height: 540px; 
+        height: 485px; 
         left: -30px; 
         top: 40px;
     }
@@ -6839,7 +6886,7 @@ border-radius: 100% 0 0 0;
 
     .address-title::after {
         width: 3px;
-        height: 342px; 
+        height: 345px; 
         right: -25px; 
         top: 35px;
     }
@@ -6851,11 +6898,11 @@ border-radius: 100% 0 0 0;
     border-top: none; 
     border-left: none;
         right: -351px; 
-        top: 263px; 
+        top: 267.5px; 
     }
 
     .address-list::before {
-        width: 339px;
+        width: 340px;
         height: 3px; 
         right: -291px; 
         bottom: -23px;
@@ -7059,14 +7106,14 @@ border-radius: 100% 0 0 0;
     }
 
     .address-title::after {
-        height: 310px; 
+        height: 315px; 
         right: -30px; 
         top: 35px;
     }
     
     .address-list::after {
         right: -449.5px; 
-        top: 205px; 
+        top: 209px; 
     }
 
     .address-list::before {
@@ -7119,7 +7166,7 @@ border-radius: 100% 0 0 0;
 
     .partner-container-color::before {
         width: 3px;
-        height: 617px; 
+        height: 620px; 
         right: 52px; 
         top: -60px;
     }
