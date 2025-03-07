@@ -111,11 +111,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ✅ Обработчик клика по кнопке "CENNIKI"
-    priceButton.addEventListener('click', (event) => {
-        event.stopPropagation();
-        popup.style.display = 'block';
+priceButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    
+    if (popup.style.display === 'block') {
+        popup.style.display = 'none'; // Если уже открыто, закрываем
+        burgerMenu.classList.remove("active"); // Возвращаем полоски
+    } else {
+        popup.style.display = 'block'; // Если закрыто, открываем
         burgerMenu.classList.add("active"); // ✅ Держим крестик активным
-    });
+    }
+});
 
     // ✅ Toggle price popup from mobile menu
     mobilePriceButton.addEventListener('click', (event) => {

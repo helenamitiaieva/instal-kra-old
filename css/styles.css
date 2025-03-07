@@ -1463,7 +1463,7 @@ backdrop-filter: blur(10px);
 @media screen and (min-width: 1024px) {
     .partner-container  { 
         max-width: 400px; 
-        padding-bottom: 53px;
+        padding-bottom: 10px;
     }
 }
 
@@ -1739,6 +1739,7 @@ padding-right: 53px;
 
 @media screen and (min-width: 1440px) {
     .partner-list-img   {
+        flex-direction: row;
         gap: 20px;
         padding-right: 98px;
         padding-left: 97px;
@@ -1753,9 +1754,6 @@ padding-right: 53px;
     }
 }
 
-.partner-item-img {
-
-}
 .partner-img {
     border-radius: 20px;
     width: 157px;
@@ -1771,8 +1769,8 @@ padding-right: 53px;
 
 @media screen and (min-width: 1024px) {
     .partner-img  { 
-       width: 167px;
-       height: 103px;
+       width: 200px;
+       height: auto;
     }
 }
 
@@ -1804,8 +1802,8 @@ padding-right: 53px;
 
 @media screen and (min-width: 1024px) {
     .partner-img-second  { 
-       width: 85px;
-       height: 103px;
+       width: 140px;
+       height: auto;
     }
 }
 
@@ -1984,9 +1982,19 @@ padding-right: 0;
     }
 }
 
-.about-text-mobile {
-    min-height: 209px;
+@media (min-width: 0px) and (max-width: 767px) {  
+    .about-text-mobile {
+        min-height: 209px;
+    }
+    }
+
+
+@media screen and (min-width: 1024px) {
+    .about-text-mobile {
+        min-height: 209px;
+    }
 }
+
 
 .about-text-bold {
     font-size: 14px;
@@ -6944,7 +6952,7 @@ border-radius: 100% 0 0 0;
     border-top: none; 
     border-left: none;
         right: -351px; 
-        top: 267.5px; 
+        top: 263px; 
     }
 
     .address-list::before {
@@ -7159,7 +7167,7 @@ border-radius: 100% 0 0 0;
     
     .address-list::after {
         right: -449.5px; 
-        top: 209px; 
+        top: 205px; 
     }
 
     .address-list::before {
@@ -7328,7 +7336,7 @@ border-radius: 100% 0 0 0;
     }
 
     .company-title::after {
-        height: 347px; 
+        height: 360px; 
         left: -60px; 
         top: 32px;
     }
