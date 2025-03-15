@@ -5864,6 +5864,12 @@ padding-bottom: 20px;
     }
   }
 
+  @media screen and (min-width: 1920px) {
+    .footer-container-logo-social {
+        padding-left: 140px;
+    }
+  }
+
 
 .footer-icon-logo {
     fill: #F7F9FC;
@@ -6952,7 +6958,7 @@ border-radius: 100% 0 0 0;
     border-top: none; 
     border-left: none;
         right: -351px; 
-        top: 263px; 
+        top: 267.5px; 
     }
 
     .address-list::before {
@@ -7167,7 +7173,7 @@ border-radius: 100% 0 0 0;
     
     .address-list::after {
         right: -449.5px; 
-        top: 205px; 
+        top: 209px; 
     }
 
     .address-list::before {
@@ -7204,18 +7210,18 @@ border-radius: 100% 0 0 0;
 
     .hero-button-link::after {
         left: 1228px; 
-        top: 12px;
+        top: 12.5px;
     }
 
     .hero-button-decor::after {
-        width: 890px;
+        width: 889px;
         height: 3px; 
     }
 
     .hero-button-link::before {
         width: 3px;
         left: 1265px; 
-        top: 50px;
+        top: 52px;
     }
 
     .partner-container-color::before {
@@ -7407,8 +7413,8 @@ border-radius: 100% 0 0 0;
     }
 
     .hero-button-decor::after {
-        width: 1220px;/* Полоска тянется почти до правого края */
-        height: 3px; /* Толщина полоски */
+        width: 1220px;
+        height: 3px;
         margin-left: 30px;
     }
 
