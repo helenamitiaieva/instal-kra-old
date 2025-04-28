@@ -429,7 +429,7 @@ display: none;
 
 @media (min-width: 1024px) and (max-width: 1439px) {
     .address-link {
-      width: 130px;
+      width: 131px;
     }
   }
 
@@ -1970,20 +1970,61 @@ margin-bottom: 20px;
     background-color: #000;
 }
 
+@media screen and (min-width: 1024px) {
+    .lamb  { 
+      
+    }
+}
+
 .lamb-container {
     position: relative;
     z-index: 1;
 }
 
-
 .lamb-container:after {
     position: absolute;
     content: '';
     width: 2px;
-    height: 688px; 
+    height: 673px; 
     background-color: #F7F9FC; 
     right: 15px; 
     top: -20px;
+}
+
+@media screen and (min-width: 768px) {
+    .lamb-container:after   {
+        top: -40px;
+        right: 28px; 
+        height: 516px;
+        width: 3px;
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .lamb-container:after   { 
+        right: 30px; 
+        top: -50px;
+        height: 600px; 
+        width: 2px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .lamb-container:after  {
+        right: 53px; 
+        top: -60px;
+        height: 715px; 
+    }
+  }
+
+@media screen and (min-width: 1920px) {
+    .lamb-container:after   {
+        right: 160px; 
+        top: -100px;
+        height: 823px; 
+         
+    }
 }
 
 .lamb-container::before {
@@ -2002,7 +2043,8 @@ z-index: -1;
 @media screen and (min-width: 768px) {
     .lamb-container::before   {
         width: 697px;
-        height: auto;
+        height: 350px;
+        top: 20px;
         background-image: url('/image/lamborghini-car-768-2x.png');
     }
 }
@@ -2010,20 +2052,30 @@ z-index: -1;
 @media screen and (min-width: 1024px) {
     .lamb-container::before   { 
         background-image: url('/image/lamborghini-car-1024-2x.png');
-       
+        width: 865px;
+        height: 437px;
+        top: 120px;
+        right: 0px;
+
     }
 }
 
 @media screen and (min-width: 1440px) {
     .lamb-container::before  {
         background-image: url('/image/lamborghini-car-1440-2x.png');
-       
+        width: 1052px;
+        height: 514px;
     }
   }
 
 @media screen and (min-width: 1920px) {
     .lamb-container::before   {
         background-image: url('/image/lamborghini-car-1920-2x.png');
+        width: 1668px;
+        height: 847px;
+        top: -100px;
+        right: 30px;
+
     }
 }
 
@@ -2062,6 +2114,13 @@ padding-left: 30px;
     }
   }
 
+
+@media screen and (min-width: 1920px) {
+    .lamd-container-logo {
+padding-left: 100px;
+    }
+  }
+
 .lamb-logo {
     width: 188px;
 }
@@ -2089,7 +2148,8 @@ padding-left: 30px;
 
 @media screen and (min-width: 1920px) {
     .lamb-logo  {
-         
+        width: 366px;
+        padding-left: 50px;  
     }
 }
 
@@ -2101,26 +2161,34 @@ padding-left: 30px;
     .lamb-container-text {
         position: absolute;
         left: 200px;
-        top: -50px;
+        top: -70px;
         padding-right: 50px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .lamb-container-text {
-        padding-right: 0px;
+        padding-right: 120px;
         left: 350px;
-        top: 25px;
+        top: -50px;
     }
 }
 
 @media screen and (min-width: 1440px) {
         .lamb-container-text {
-            padding-right: 290px;
-            left: 300px;
-            top: -10px;
+            padding-right: 150px;
+            left: 500px;
+            top: -40px;
         }
   }
+
+@media screen and (min-width: 1920px) {
+    .lamb-container-text {
+        padding-right: 500px;
+        left: 600px;
+        top: -50px;
+    }
+}
 
 .lamb-title {
     color: #F7F9FC;
@@ -2161,7 +2229,7 @@ padding-left: 30px;
     line-height: 1.25;
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -2179,6 +2247,7 @@ padding-left: 30px;
 @media screen and (min-width: 1440px) {
     .lamb-text  {
         font-size: 22px;  
+        margin-bottom: 50px;
     }
   }
 
@@ -2198,7 +2267,7 @@ padding-left: 30px;
 
 @media screen and (min-width: 1440px) {
     .lamb-container-img {
-       padding-left: 75px;
+       padding-left: 250px;
     }
 }
 
@@ -2245,6 +2314,25 @@ height: auto;
 .heating {
     background-color: #3B3B3B;  
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .heating  {
+        padding-top: 47px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .heating  {
+        padding-top: 45px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .heating  {
+        padding-top: 54px;
+    }
+}
+
 
 .heating-container-full {
     display: flex;
@@ -5597,7 +5685,7 @@ z-index: -1;
         width: 237px; 
         height: 323px; 
         top: -20px;
-        right: -115px; 
+        right: -95px; 
     }
 }
 
@@ -6454,6 +6542,7 @@ border-radius: 0 100% 0 0;
     top: -2px;
 }
 
+
 .heating-container-full {
     position: relative;
 }
@@ -6887,23 +6976,23 @@ border-radius: 100% 0 0 0;
 
     .about-container-full::before {
         width: 3px;
-        height: 388px; 
+        height: 430px; 
         right: 28px ; 
         top: 0px;    
     }
 
     .heating-container-full::before {
-        width: 60px; 
-        height: 60px;
+        width: 30px; 
+        height: 30px;
         border: 3px solid #C12930;
     border-top: none; 
     border-left: none;
-        left: 680px; 
-        top: -77px; 
+        left: 710px; 
+        top: -47px; 
     }
 
     .heating-container-full::after {
-        width: 580px;
+        width: 610px;
         height: 3px; 
         left: 100px; 
         top: -20px;
@@ -7172,7 +7261,7 @@ border-radius: 100% 0 0 0;
     }
     
     .about-container-full::before {
-        height: 502px; 
+        height: 530px; 
         right: 29px ; 
         top: 0px;    
     }
@@ -7180,12 +7269,13 @@ border-radius: 100% 0 0 0;
     .heating-container-full::before {
     border-top: none; 
     border-left: none;
-        left: 935px; 
-        top: -77px; 
+        left: 965px; 
+        top: -47px; 
+        z-index: 10;
     }
 
     .heating-container-full::after {
-        width: 810px;
+        width: 836px;
         left: 130px; 
         top: -20px;
     }
@@ -7378,17 +7468,17 @@ border-radius: 100% 0 0 0;
     
     .about-container-full::before {
         width: 3px;
-        height: 595px; 
-        right: 52px ; 
+        height: 620px; 
+        right: 52px; 
         top: 0px;    
     }
     .heating-container-full::before {
-        left: 1328px; 
-        top: -85px; 
+        left: 1357px; 
+        top: -55px; 
     }
 
     .heating-container-full::after {
-        width: 1210px;
+        width: 1238px;
         left: 120px; 
         top: -28px;
     }
