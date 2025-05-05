@@ -2168,7 +2168,7 @@ padding-left: 100px;
 
 @media screen and (min-width: 1024px) {
     .lamb-container-text {
-        padding-right: 120px;
+        padding-right: 110px;
         left: 350px;
         top: -50px;
     }
@@ -2176,7 +2176,7 @@ padding-left: 100px;
 
 @media screen and (min-width: 1440px) {
         .lamb-container-text {
-            padding-right: 150px;
+            padding-right: 120px;
             left: 500px;
             top: -40px;
         }

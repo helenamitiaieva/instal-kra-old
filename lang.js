@@ -39,7 +39,7 @@ const translations = {
         "uczestniczymy w programie lojalnościowym naszego partnera firmy INSTAL-KA Sp. z o.o. GRUPA SBS Sp.k.": 
         "ми беремо участь у програмі лояльності нашого партнера компанії INSTAL-KA Sp. z o.o. GRUPA SBS Sp.k.",
     
-    "Nowoczesne rozwiązania w zakresie instalacji grzewczych": 
+        "Nowoczesne rozwiązania w zakresie instalacji grzewczych": 
         "Сучасні рішення у сфері опалювальних установок",
 
         "Oferujemy nowoczesne rozwiązania w zakresie instalacji grzewczych zarówno tych tradycyjnych, jak i współcześnie najbardziej efektywnych i ekologicznych, wykorzystujących odnawialne źródła energii. Jesteśmy gotowi, by wesprzeć Państwa w podjęciu decyzji, co do wyboru systemu oraz technologii wykonania instalacji grzewczej w oparciu o wyroby renomowanych i uznanych na rynku producentów.":
@@ -47,6 +47,11 @@ const translations = {
 
         "Producenci, z którymi współpracujemy, to uznane, nagradzane firmy, gwarantujące wysoką jakość swoich wyrobów, potwierdzoną licznymi certyfikatami.":
         "Виробники, з якими ми співпрацюємо, — це визнані, нагороджені компанії, що гарантують високу якість своєї продукції, підтверджену численними сертифікатами.",
+
+        "Legendarna marka w twoim domu!": "Легендарний бренд у твоєму домі!",
+        "Zakup możliwy na korzystnych warunkach, z profesjonalnym wsparciem i sprawną realizacją.":
+        "Закупівля можлива на вигідних умовах, з професійною підтримкою та оперативним виконанням.",
+
         "Ogrzewanie": "Опалення",
 
         "Nowoczesne systemy grzewcze dla każdego rodzaju budynku. Zapewniamy efektywne i oszczędne rozwiązania dostosowane do potrzeb każdego klienta.":
@@ -173,6 +178,12 @@ const translations = {
 
         "Виробники, з якими ми співпрацюємо, — це визнані, нагороджені компанії, що гарантують високу якість своєї продукції, підтверджену численними сертифікатами.":
         "Producenci, z którymi współpracujemy, to uznane, nagradzane firmy, gwarantujące wysoką jakość swoich wyrobów, potwierdzoną licznymi certyfikatami.",
+
+        "Легендарний бренд у твоєму домі!": "Legendarna marka w twoim domu!",
+
+        "Закупівля можлива на вигідних умовах, з професійною підтримкою та оперативним виконанням.":
+        "Zakup możliwy na korzystnych warunkach, z profesjonalnym wsparciem i sprawną realizacją.",
+
         "Опалення": "Ogrzewanie",
 
         "Сучасні системи опалення для будь-якого типу будівель. Ми забезпечуємо ефективні та економічні рішення, адаптовані до потреб кожного клієнта.":
