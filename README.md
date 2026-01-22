@@ -57,3 +57,7 @@ This repo represents the **old implementation**.
 ## Author
 **Olena Mitiaieva**  
 GitHub: [helenamitiaieva](https://github.com/helenamitiaieva)
+
+## Designer
+**Elizabeth Lebedeva**  
+GitHub: [LESergeevna](https://github.com/LESergeevna)
